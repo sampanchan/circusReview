@@ -70,8 +70,8 @@ body {
 		// apply top and left borders to all, unless overruled
 		@include bt;
 		@include bl;
-		border-bottom: 1px solid rgba(0,0,0,0.2); // debugging
-		border-right: 1px solid rgba(0,0,0,0.2); // debugging
+		// border-bottom: 1px solid rgba(0,0,0,0.2); // debugging
+		// border-right: 1px solid rgba(0,0,0,0.2); // debugging
 	}
 
 	.logo {
@@ -86,16 +86,32 @@ body {
 		grid-column: 7/9;
 		grid-row: 1/3;
 	}
+	.nav-spacer-2 {
+		grid-column: 16/25;
+		grid-row: 3/4;
+	}
 	.program-picker {
 		grid-column: 9/13;
+		grid-row: 1/3;
+	}
+	.faq-button {
+		grid-column: 16/19;
 		grid-row: 1/3;
 	}
 	.star-line {
 		grid-column: 1/13;	
 	}
+	.star-line-corner {
+		grid-row: 1/3;	
+		grid-column: 19/25;	
+	}
 	.main-title {
 		grid-column: 1/13;
 		grid-row: 4/13;
+	}
+	.wide-spacer {
+		grid-column: 1/13;
+		grid-row: 14/16;
 	}
 	.big-letter {
 		grid-row-end: span 3;
@@ -159,6 +175,12 @@ body {
 }
 
 
+// Filled Spacer: in the 2021 site, this is a grid item that's just filled with maroon
+.filled-spacer {
+	background-color: #620505;
+}
+
+
 
 // Main Title: "Student Portfolio Review"
 .main-title {
@@ -201,8 +223,17 @@ body {
 	align-items: center;
 	img {
 		height: 50%;
-	}	
+	}
+	&.star-line-corner {
+		img {
+			height: 25%;
+		}	
+	}
 }
+
+
+
+
 
 
 // Featured People: people in the upper grid
