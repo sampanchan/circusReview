@@ -91,10 +91,11 @@ body {
 		grid-row: 1/3;
 	}
 	.star-line {
-		grid-column: 1/12;	
+		grid-column: 1/13;	
 	}
 	.main-title {
-		grid-column: 1/12;
+		grid-column: 1/13;
+		grid-row: 4/13;
 	}
 	.big-letter {
 		grid-row-end: span 3;
@@ -124,7 +125,106 @@ body {
 			grid-row-start: 13;
 		}
 	}
+
+	.featured-person {
+		grid-row-end: span 3;
+		grid-column-end: span 3;
+		&.featured-person-1 {
+			grid-row-start: 4;
+			grid-column-start: 13;		
+		}
+		&.featured-person-2 {
+			grid-row-start: 4;
+			grid-column-start: 22;		
+		}
+		&.featured-person-3 {
+			grid-row-start: 10;
+			grid-column-start: 16;		
+			grid-row-end: span 6;
+			grid-column-end: span 6;
+		}
+	}
 }
+
+
+// Logo: duh
+.logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	img {
+		height: 70%;
+	}
+}
+
+
+
+// Main Title: "Student Portfolio Review"
+.main-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 0 0 2vw;
+	h1 {
+		font-size: 11vw;
+		font-weight: 300;
+		span:nth-child(2) {
+			font-size: 0.85em;
+		}
+		span:nth-child(3) {
+			font-size: 0.7em;
+		}
+	}
+}
+
+
+// Big Letters: the big ass letters on the top section that spell out "CIRCUS"
+.big-letter {
+	position: relative;
+	font-size: 9vw;
+	text-transform: uppercase;
+	text-align: center;
+	span {
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+
+
+// Star Line: the horizontal bar with 4 black stars in it
+.star-line {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	img {
+		height: 50%;
+	}	
+}
+
+
+// Featured People: people in the upper grid
+.featured-person {
+	background-size: contain;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	&.featured-person-orange {
+		background-color: #DB7D42;
+		background-image: url('../img/featured-person-1.png');
+	}
+	&.featured-person-blue {
+		background-color: #6889AA;
+		background-image: url('../img/featured-person-2.png');
+	}
+	&.featured-person-peach {
+		background-color: #EBB29D;
+		background-image: url('../img/featured-person-3.png');
+	}
+}
+
+
 
 
 
