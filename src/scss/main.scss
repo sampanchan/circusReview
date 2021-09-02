@@ -65,13 +65,36 @@ body {
 	@mixin bl {
 		border-left: 1px solid black;
 	}
+	@mixin br {
+		border-right: 1px solid black;
+	}
+	@mixin bb {
+		border-bottom: 1px solid black;
+	}
 	
 	> * {
 		// apply top and left borders to all, unless overruled
 		@include bt;
 		@include bl;
-		// border-bottom: 1px solid rgba(0,0,0,0.2); // debugging
-		// border-right: 1px solid rgba(0,0,0,0.2); // debugging
+	}
+
+	.border-maker {
+		&.border-maker-1 {
+			grid-column: 13/16;
+			grid-row: 7/10;
+		}
+		&.border-maker-2 {
+			grid-column: 19/22;
+			grid-row: 7/10;
+		}
+		&.border-maker-3 {
+			grid-column: 22/25;
+			grid-row: 10/13;
+		}
+		&.border-maker-4 {
+			grid-column: 13/16;
+			grid-row: 13/16;
+		}
 	}
 
 	.logo {
@@ -175,6 +198,22 @@ body {
 }
 
 
+// Nav: typography for all nav items
+.nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.70vw;
+	letter-spacing: 0.05em;
+}
+
+// Nav Dropdown: quarter or program in the top nav
+.nav-dropdown  {
+	position: relative;
+}
+
+
 // Filled Spacer: in the 2021 site, this is a grid item that's just filled with maroon
 .filled-spacer {
 	background-color: #620505;
@@ -207,13 +246,102 @@ body {
 	font-size: 9vw;
 	text-transform: uppercase;
 	text-align: center;
+	overflow: hidden;
 	span {
 		position: absolute;
 		top: 50%;
+		width: 100%;
+		transform: translate(-50%, -50%);
+	}
+	&.animate {
+		span {
+			animation-name: big-letter-right;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+		}
+	}
+	&.big-letter-c1.animate {
+		span {
+			animation-name: big-letter-down;
+		}
+	}
+	&.big-letter-i.animate {
+		span {
+			animation-name: big-letter-up;
+		}
+	}
+	&.big-letter-r.animate {
+		span {
+			animation-name: big-letter-left;
+		}
+	}
+	&.big-letter-u.animate {
+		span {
+			animation-name: big-letter-left;
+		}
+	}
+	&.big-letter-s.animate {
+		span {
+			animation-name: big-letter-down;
+		}
+	}
+}
+@keyframes big-letter-right {
+	0% {
+		transform: translate(-50%, -50%);
+	}			
+	50% {
+		transform: translate(100%, -50%);
+	}		
+	51% {
+		transform: translate(-150%, -50%);
+	}		
+	100% {
 		transform: translate(-50%, -50%);
 	}
 }
-
+@keyframes big-letter-left {
+	0% {
+		transform: translate(-50%, -50%);
+	}			
+	50% {
+		transform: translate(-150%, -50%);
+	}		
+	51% {
+		transform: translate(100%, -50%);
+	}		
+	100% {
+		transform: translate(-50%, -50%);
+	}
+}
+@keyframes big-letter-up {
+	0% {
+		transform: translate(-50%, -50%);
+	}			
+	50% {
+		transform: translate(-50%, -170%);
+	}		
+	51% {
+		transform: translate(-50%, 100%);
+	}		
+	100% {
+		transform: translate(-50%, -50%);
+	}
+}
+@keyframes big-letter-down {
+	0% {
+		transform: translate(-50%, -50%);
+	}			
+	50% {
+		transform: translate(-50%, 120%);
+	}		
+	51% {
+		transform: translate(-50%, -150%);
+	}		
+	100% {
+		transform: translate(-50%, -50%);
+	}
+}
 
 
 // Star Line: the horizontal bar with 4 black stars in it
