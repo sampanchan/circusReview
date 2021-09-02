@@ -303,13 +303,24 @@ body {
 	grid-row-end: span 3;
 	display: flex;
 }
+.the-mega-grid .student-subgrid .student-spacer > div {
+	border-right: 1px solid black;
+}
 .the-mega-grid .student-subgrid .student-spacer.student-spacer-shorter {
 	grid-row-end: span 2;
 }
-.the-mega-grid .student-subgrid .student-spacer .student-spacer-child {
-	border-top: 1px solid black;
-	border-left: 1px solid black;
+.the-mega-grid .student-subgrid .student-spacer .student-spacer-2-3 {
 	width: 66.66666%;
+	height: 100%;
+}
+.the-mega-grid .student-subgrid .student-spacer .student-spacer-even {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+}
+.the-mega-grid .student-subgrid .student-spacer .student-spacer-even img {
+	height: 25%;
 }
 
 .logo {
