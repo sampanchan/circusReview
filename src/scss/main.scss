@@ -41,6 +41,9 @@ body {
 
 /* 2. Content ================================= */
 
+// One Twenty-fourth: We're on a 24 column grid, so each grid item square is 1/24th of the width of the page.
+$one24th: 100vw/24;
+
 
 .the-mega-grid {
 	// ==========================
@@ -52,7 +55,6 @@ body {
 
 	width: 100%;
 	display: grid;
-	$one24th: 1vw/24*100;
 	grid-template-rows: repeat(24, $one24th);
 	grid-template-columns: repeat(24, $one24th);
 
@@ -94,6 +96,10 @@ body {
 		&.border-maker-4 {
 			grid-column: 13/16;
 			grid-row: 13/16;
+		}
+		&.border-maker-5 {
+			grid-column: 16/19;
+			grid-row: 4/7;
 		}
 	}
 
@@ -211,6 +217,47 @@ body {
 // Nav Dropdown: quarter or program in the top nav
 .nav-dropdown  {
 	position: relative;
+
+	&:hover {
+		ul {
+			display: block;
+		}
+	}
+	ul {
+		position: absolute;
+		display: none;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: #EBE0CC;
+		
+		li {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid black;
+			border-bottom-width: 0;
+			min-height: $one24th * 1.5;
+			font-size: 0.8em;
+			line-height: 1.2em;
+			text-align: center;
+			padding: 0 1vw;
+			// padding: 20px;
+			&:last-child {
+				border-bottom-width: 1px;
+			}
+
+			&:hover {
+				background-color: rgba(255,255,255,0.3);
+			}
+
+			small {
+				display: block;
+				font-size: 0.8em;
+			}
+		}
+	}
 }
 
 
