@@ -298,6 +298,19 @@ body {
 	grid-column-end: span 12;
 	grid-row-end: span 6;
 }
+.the-mega-grid .student-subgrid .student-spacer {
+	grid-column-end: span 12;
+	grid-row-end: span 3;
+	display: flex;
+}
+.the-mega-grid .student-subgrid .student-spacer.student-spacer-shorter {
+	grid-row-end: span 2;
+}
+.the-mega-grid .student-subgrid .student-spacer .student-spacer-child {
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	width: 66.66666%;
+}
 
 .logo {
 	display: flex;

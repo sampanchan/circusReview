@@ -207,6 +207,23 @@ $one24th: 100vw/24;
 			grid-column-end: span 12;
 			grid-row-end: span 6;
 		}
+
+		.student-spacer {
+			grid-column-end: span 12;
+			grid-row-end: span 3;
+			display: flex;
+			
+			&.student-spacer-shorter {
+				grid-row-end: span 2;
+				
+			}
+
+			.student-spacer-child {
+				@include bt;
+				@include bl;
+				width: 66.66666%;
+			}
+		}
 	}
 }
 
