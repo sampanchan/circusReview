@@ -23,23 +23,24 @@
 			<div class="logo">
 				<img src="dist/img/the-creative-circus-logo-png-transparent.png">
 			</div>
-			<div class="nav nav-dropdown quarter-picker">
+			<div class="nav nav-dropdown cohort-picker">
 				Quarter
 				<ul>
-					<li><span>Summer 2021<small>(medium well)</small></span></li>
-					<li><span>Fall 2021 <small>(rare)</small></span></li>
+					<li class="active" data-cohort="all">All</li>
+					<li data-cohort="summer">Summer 2021<small>(medium well)</small></li>
+					<li data-cohort="fall">Fall 2021 <small>(rare)</small></li>
 				</ul>
 			</div>
 			<div class="nav-spacer filled-spacer"></div>
 			<div class="nav nav-dropdown program-picker">
 				Program
 				<ul>
-					<li><span>All</span></li>
-					<li><span>Copywriting</span></li>
-					<li><span>Art Direction</span></li>
-					<li><span>Design</span></li>
-					<li><span>Photography & Content</span></li>
-					<li><span>Creative Technology</span></li>
+					<li class="active" data-program="all">All</li>
+					<li data-program="copywriting">Copywriting</li>
+					<li data-program="artdirection">Art Direction</li>
+					<li data-program="design">Design</li>
+					<li data-program="photography">Photography & Content</li>
+					<li data-program="creativetechnology">Creative Technology</li>
 				</ul>
 			</div>
 			<div class="nav faq-button">FAQ</div>
@@ -96,7 +97,7 @@
 			<div class="student-subgrid">
 				
 				
-				<div class="student student-purple">
+				<div class="student student-purple" data-program="design" data-cohort="summer">
 					<figure>
 						<img src="dist/img/featured-person-2.png">
 					</figure>
