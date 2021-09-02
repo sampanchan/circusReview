@@ -285,10 +285,14 @@ body {
 }
 .the-mega-grid .student-subgrid {
 	grid-column: 1/25;
-	background-color: rgba(255, 255, 255, 0.3);
+	border-width: 0;
 	display: grid;
 	grid-template-rows: repeat(24, 4.1666666667vw);
 	grid-template-columns: repeat(24, 4.1666666667vw);
+}
+.the-mega-grid .student-subgrid > * {
+	border-top: 1px solid black;
+	border-left: 1px solid black;
 }
 .the-mega-grid .student-subgrid .student {
 	grid-column-end: span 12;
@@ -566,10 +570,35 @@ body {
 .student.student-flipped figure {
 	order: 2;
 }
+.student.student-purple figure {
+	background-color: #AC9DEB;
+}
+.student.student-pink figure {
+	background-color: #EB9DAF;
+}
+.student.student-blue figure {
+	background-color: #89A5D3;
+}
+.student.student-green figure {
+	background-color: #68AA81;
+}
+.student.student-orange figure {
+	background-color: #D1986E;
+}
+.student.student-yellow figure {
+	background-color: #DBBE42;
+}
+.student.student-dark-blue figure {
+	background-color: #6877AA;
+}
 .student figure {
 	background: rgba(0, 0, 0, 0.2);
 	width: 50%;
 	height: 100%;
+}
+.student figure img {
+	width: 100%;
+	height: auto;
 }
 .student div {
 	width: 50%;
