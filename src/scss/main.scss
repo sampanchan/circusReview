@@ -34,7 +34,7 @@ background: variables.$primary-color;
 }
 
 body {
-	background: #EBE0CC;
+	background: #ebe0cc;
 	font-family: variables.$main-font;
 	overflow:scroll;
 }
@@ -55,7 +55,7 @@ $one24th: 100vw/24;
 
 	width: 100%;
 	display: grid;
-	grid-template-rows: repeat(24, $one24th);
+	grid-template-rows: repeat(100, $one24th);
 	grid-template-columns: repeat(24, $one24th);
 
 	// column-gap: 1px;
@@ -190,54 +190,43 @@ $one24th: 100vw/24;
 		}
 	}
 
-	.student-subgrid {
-		grid-column: 1/25;
-		border-width: 0;
-		> * {
-			// apply top and left borders to all, unless overruled
-			@include bt;
-			@include bl;
+
+
+	.student {
+		grid-column-end: span 12;
+		grid-row-end: span 6;
+	}
+
+	.student-spacer {
+		grid-column-end: span 12;
+		grid-row-end: span 3;
+		display: flex;
+
+		
+		> div {
+			@include br;
 		}
 
-		display: grid;
-		grid-template-rows: repeat(24, $one24th);
-		grid-template-columns: repeat(24, $one24th);
-
-		.student {
-			grid-column-end: span 12;
-			grid-row-end: span 6;
+		&.student-spacer-shorter {
+			grid-row-end: span 2;
 		}
 
-		.student-spacer {
-			grid-column-end: span 12;
-			grid-row-end: span 3;
+		.student-spacer-2-3 {
+			width: 66.66666%;
+			height: 100%;
+		}
+
+		.student-spacer-even {
 			display: flex;
-
-			
-			> div {
-				@include br;
-			}
-
-			&.student-spacer-shorter {
-				grid-row-end: span 2;
-			}
-
-			.student-spacer-2-3 {
-				width: 66.66666%;
-				height: 100%;
-			}
-
-			.student-spacer-even {
-				display: flex;
-				flex-grow: 1;
-				justify-content: center;
-				align-items: center;
-				img {
-					height: 25%;
-				}
+			flex-grow: 1;
+			justify-content: center;
+			align-items: center;
+			img {
+				height: 25%;
 			}
 		}
 	}
+	
 }
 
 
@@ -249,6 +238,10 @@ $one24th: 100vw/24;
 	align-items: center;
 	img {
 		height: 70%;
+		transition: 1s;
+		&:hover {
+			transform: rotate(360deg);
+		}
 	}
 }
 
