@@ -1,4 +1,11 @@
-// 0 breakpoints ==================================== 
+
+
+
+// Universal column unit: On desktop, we're on a 24 column grid, so each grid item square is 1/24th of the width of the page.
+$column: 100vw/24;
+$column-mobile: 100vw/12;
+
+// breakpoints ==================================== 
 // small tablets and large smartphones (landscape view)
 $breakpoint-phone: 576px;
 
@@ -13,9 +20,9 @@ $breakpoint-xl: 1200px;
 
 
 // * 1. Colors =======================================
-$main-color: #EBE0CC;
+$site_background: #EBE0CC;
 $black: rgb(32, 32, 32);
-$circus: #620505;
+$dark_spacer: #620505;
 
 
 
