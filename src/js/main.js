@@ -3,38 +3,43 @@
 let pickedCohort = 'all'
 let pickedProgram = 'all'
 let allStudents = document.querySelectorAll('.student')
+let allStudentSpacers = document.querySelectorAll('.student-spacer')
 let cohortPickerItems = document.querySelectorAll('.cohort-picker li')
 let programPickerItems = document.querySelectorAll('.program-picker li')
 cohortPickerItems.forEach(item => {
 	item.addEventListener('click', function() {
-		let currentCohortItem = document.querySelector('.cohort-picker .active')
-		if (currentCohortItem === this) return
-		currentCohortItem.classList.remove('active')
-		this.classList.add('active')
-		console.log('pickedCohort',pickedCohort)
+		if (pickedCohort === this.dataset.cohort) return
 		pickedCohort = this.dataset.cohort
+		let currentCohortItems = document.querySelectorAll('.cohort-picker .active')
+		currentCohortItems.forEach(item => item.classList.remove('active'))
+		let newCohortItems = document.querySelectorAll(`.cohort-picker li[data-cohort=${pickedCohort}]`)
+		newCohortItems.forEach(item => item.classList.add('active'))
+		console.log('pickedCohort',pickedCohort)
+		
 		showHideStudents()
 	})
 })
 programPickerItems.forEach(item => {
 	item.addEventListener('click', function() {
-		let currentProgramItem = document.querySelector('.program-picker .active')
-		if (currentProgramItem === this) return
-		currentProgramItem.classList.remove('active')
-		this.classList.add('active')
-		console.log('pickedProgram',pickedProgram)
+		if (pickedProgram === this.dataset.program) return
 		pickedProgram = this.dataset.program
+		let currentProgramItems = document.querySelectorAll('.program-picker .active')
+		currentProgramItems.forEach(item => item.classList.remove('active'))
+		let newProgramItems = document.querySelectorAll(`.program-picker li[data-program=${pickedProgram}]`)
+		newProgramItems.forEach(item => item.classList.add('active'))
+		console.log('pickedProgram',pickedProgram)
+		
 		showHideStudents()
 	})
 })
 let showHideStudents = () => {
-	allStudents.forEach(student => {
-		if ((student.dataset.program === pickedProgram || 'all' === pickedProgram) && (student.dataset.cohort === pickedCohort || 'all' === pickedCohort) ) {
+	[...allStudents, ...allStudentSpacers].forEach(item => {
+		if ((item.dataset.program === pickedProgram || 'all' === pickedProgram) && (item.dataset.cohort === pickedCohort || 'all' === pickedCohort) ) {
 			// show!
-			student.style.display = 'flex'
+			item.style.display = 'flex'
 		} else {
 			// hide!
-			student.style.display = 'none'
+			item.style.display = 'none'
 		}
 	})
 }
