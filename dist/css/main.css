@@ -494,41 +494,12 @@ table {
 }
 .the-mega-grid .student {
 	grid-column-end: span 12;
-	grid-row-end: span 6;
+	grid-row-end: span 8;
 }
 @media screen and (max-width: 576px) {
 	.the-mega-grid .student {
 		grid-row-end: span 7;
 	}
-}
-.the-mega-grid .student-spacer {
-	grid-column-end: span 12;
-	grid-row-end: span 3;
-	display: flex;
-}
-@media screen and (max-width: 576px) {
-	.the-mega-grid .student-spacer {
-		display: none;
-	}
-}
-.the-mega-grid .student-spacer > div {
-	border-right: 1px solid #202020;
-}
-.the-mega-grid .student-spacer.student-spacer-shorter {
-	grid-row-end: span 2;
-}
-.the-mega-grid .student-spacer .student-spacer-2-3 {
-	width: 66.66666%;
-	height: 100%;
-}
-.the-mega-grid .student-spacer .student-spacer-even {
-	display: flex;
-	flex-grow: 1;
-	justify-content: center;
-	align-items: center;
-}
-.the-mega-grid .student-spacer .student-spacer-even img {
-	height: 25%;
 }
 
 body {
@@ -746,15 +717,16 @@ body {
 .student {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 @media screen and (min-width: 575px) {
-	.student.student-flipped figure {
-		order: 2;
+	.student.student-flipped figcaption {
+		order: -1;
 	}
 }
 @media screen and (max-width: 576px) {
-	.student.student-flipped-mobile figure {
-		order: 2;
+	.student.student-flipped-mobile figcaption {
+		order: -1;
 	}
 }
 .student.student-purple figure {
@@ -781,18 +753,23 @@ body {
 .student figure {
 	background: rgba(0, 0, 0, 0.2);
 	width: 50%;
-	height: 100%;
+	position: relative;
+	height: 0;
+	padding-bottom: 50%;
 }
 @media screen and (max-width: 576px) {
 	.student figure {
 		width: 58.3333333333%;
+		padding-bottom: 58.3333333333%;
 	}
 }
 .student figure img {
+	position: absolute;
 	width: 100%;
 	height: auto;
+	top: 0;
 }
-.student div {
+.student figcaption {
 	width: 50%;
 	display: flex;
 	flex-direction: column;
@@ -801,27 +778,27 @@ body {
 	font-size: 2vw;
 }
 @media screen and (max-width: 576px) {
-	.student div {
+	.student figcaption {
 		width: 41.6666666667%;
 		font-size: 4vw;
 	}
 }
-.student div h3 {
+.student figcaption h3 {
 	font-size: 1.4em;
 	margin: 0.2em 0;
 }
-.student div h4 {
+.student figcaption h4 {
 	font-size: 0.9em;
 	margin: 0.2em 0;
 }
-.student div h5 {
+.student figcaption h5 {
 	font-size: 0.75em;
 	margin: 0.2em 0;
 }
-.student div p {
+.student figcaption p {
 	margin: 0.5em 0;
 }
-.student div p a {
+.student figcaption p a {
 	display: inline-block;
 	font-size: 0.6em;
 	padding: 0.6em 0.9em;
@@ -831,8 +808,37 @@ body {
 	color: #202020;
 	text-decoration: none;
 }
-.student div p a:hover {
+.student figcaption p a:hover {
 	background-color: rgba(255, 255, 255, 0.3);
+}
+.student .spacer {
+	width: 100%;
+	height: 25%;
+	display: flex;
+}
+.student .spacer div {
+	display: flex;
+	position: relative;
+	flex-grow: 1;
+	border-top: 1px solid #202020;
+	border-left: 1px solid #202020;
+}
+.student .spacer div img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+	height: 25%;
+}
+.student .spacer div:nth-child(1) {
+	border-left-width: 0;
+}
+.student .spacer.spacer-2-1 div:nth-child(1) {
+	flex-grow: 2;
+}
+.student .spacer.spacer-1-2 div:nth-child(2) {
+	flex-grow: 2;
 }
 
 /* 

@@ -251,18 +251,19 @@ body {
 .student {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	
 	&.student-flipped {
 		@include mixins.desktop {
-			figure {
-				order: 2;
+			figcaption {
+				order: -1;
 			}
 		}
 	}
 	&.student-flipped-mobile {
 		@include mixins.mobile {
-			figure {
-				order: 2;
+			figcaption {
+				order: -1;
 			}
 		}
 	}
@@ -308,16 +309,21 @@ body {
 		// the photo
 		background: rgba(0,0,0,0.2);
 		width: 50%;
-		height: 100%;
+		position: relative;
+		height: 0;
+		padding-bottom: 50%;
 		@include mixins.mobile {
 			width: percentage(7/12);
+			padding-bottom: percentage(7/12);
 		}
 		img {
+			position: absolute;
 			width: 100%;
 			height: auto;
+			top: 0;
 		}
 	}
-	div {
+	figcaption {
 		width: 50%;
 		display: flex;
 		flex-direction: column;
@@ -358,4 +364,40 @@ body {
 			}
 		}
 	}
+
+	.spacer {
+		width:100%;
+		height: percentage(1/4);
+		display: flex;
+		div {
+			display: flex;
+			position: relative;
+			flex-grow: 1;
+			// height: 100%;
+			@include mixins.bt;
+			@include mixins.bl;
+			img { // stars
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				height: 25%;
+			}
+		}
+		div:nth-child(1) {
+			border-left-width: 0;
+		}
+		&.spacer-2-1 {
+			div:nth-child(1) {
+				flex-grow: 2;
+			}
+		}
+		&.spacer-1-2 {
+			div:nth-child(2) {
+				flex-grow: 2;
+			}
+		}
+	}
+	
+
 }

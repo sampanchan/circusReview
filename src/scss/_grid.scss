@@ -214,40 +214,12 @@
 
 	.student {
 		grid-column-end: span 12;
-		grid-row-end: span 6;
+		grid-row-end: span 8;
         @include mixins.mobile {
             grid-row-end: span 7;
         }
 	}
 
-	.student-spacer {
-		grid-column-end: span 12;
-		grid-row-end: span 3;
-		display: flex;
-        @include mixins.mobile-hide();
-		
-		> div {
-			@include mixins.br;
-		}
-
-		&.student-spacer-shorter {
-			grid-row-end: span 2;
-		}
-
-		.student-spacer-2-3 {
-			width: 66.66666%;
-			height: 100%;
-		}
-
-		.student-spacer-even {
-			display: flex;
-			flex-grow: 1;
-			justify-content: center;
-			align-items: center;
-			img {
-				height: 25%;
-			}
-		}
-	}
+	
 	
 }
