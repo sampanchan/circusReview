@@ -82,5 +82,45 @@ setInterval(function () {
   setTimeout(function () {
     letter.classList.remove('animate');
   }, 1000);
-}, 3000);
+}, 3000); // student photo animations
+
+allStudents.forEach(function (student) {
+  var photos = student.querySelectorAll('figure img');
+  var currentPhotoIndex = 0;
+  var intervalID = -1;
+
+  var changeImage = function changeImage() {
+    currentPhotoIndex++;
+
+    if (currentPhotoIndex === photos.length) {
+      currentPhotoIndex = 0;
+    }
+
+    console.log('hit');
+    photos.forEach(function (photo, i) {
+      console.log('hit', i);
+      photos[i].classList.add('hide');
+      photos[i].classList.remove('show');
+
+      if (i === currentPhotoIndex) {
+        console.log('match', i);
+        photos[i].classList.remove('hide');
+        photos[i].classList.add('show');
+      }
+    });
+  };
+
+  student.addEventListener('mouseenter', function () {
+    changeImage();
+    intervalID = setInterval(changeImage, 500);
+  });
+  student.addEventListener('mouseleave', function () {
+    clearInterval(intervalID);
+    currentPhotoIndex = 0;
+    photos.forEach(function (photo, i) {
+      photos[i].classList.remove('show');
+      photos[i].classList.remove('hide');
+    });
+  });
+});
 //# sourceMappingURL=main.js.map

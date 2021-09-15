@@ -550,7 +550,7 @@ body {
 	top: 100%;
 	left: 0;
 	width: 100%;
-	background-color: #EBE0CC;
+	background-color: #ebe0cc;
 }
 .nav-dropdown ul li {
 	display: flex;
@@ -702,15 +702,15 @@ body {
 	background-repeat: no-repeat;
 }
 .featured-person.featured-person-orange {
-	background-color: #DB7D42;
+	background-color: #db7d42;
 	background-image: url("../img/featured-person-1.png");
 }
 .featured-person.featured-person-blue {
-	background-color: #6889AA;
+	background-color: #6889aa;
 	background-image: url("../img/featured-person-2.png");
 }
 .featured-person.featured-person-peach {
-	background-color: #EBB29D;
+	background-color: #ebb29d;
 	background-image: url("../img/featured-person-3.png");
 }
 
@@ -730,25 +730,25 @@ body {
 	}
 }
 .student.student-purple figure {
-	background-color: #AC9DEB;
+	background-color: #ac9deb;
 }
 .student.student-pink figure {
-	background-color: #EB9DAF;
+	background-color: #eb9daf;
 }
 .student.student-blue figure {
-	background-color: #89A5D3;
+	background-color: #89a5d3;
 }
 .student.student-green figure {
-	background-color: #68AA81;
+	background-color: #68aa81;
 }
 .student.student-orange figure {
-	background-color: #D1986E;
+	background-color: #d1986e;
 }
 .student.student-yellow figure {
-	background-color: #DBBE42;
+	background-color: #dbbe42;
 }
 .student.student-dark-blue figure {
-	background-color: #6877AA;
+	background-color: #6877aa;
 }
 .student figure {
 	background: rgba(0, 0, 0, 0.2);
@@ -768,6 +768,16 @@ body {
 	width: 100%;
 	height: auto;
 	top: 0;
+	display: none;
+}
+.student figure img:nth-child(1) {
+	display: block;
+}
+.student figure img.hide {
+	display: none !important;
+}
+.student figure img.show {
+	display: block !important;
 }
 .student figcaption {
 	width: 50%;

@@ -4,12 +4,8 @@
 body {
 	background: variables.$site_background;
 	font-family: variables.$main-font;
-	overflow:scroll;
+	overflow: scroll;
 }
-
-
-
-
 
 // Logo: duh
 .logo {
@@ -26,23 +22,22 @@ body {
 	}
 }
 
-
 // Nav: typography for all nav items
 .nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.70vw;
+	font-size: 1.7vw;
 	letter-spacing: 0.05em;
-	
+
 	@include mixins.mobile {
 		font-size: 4vw;
 	}
 }
 
 // Nav Dropdown: quarter or program in the top nav
-.nav-dropdown  {
+.nav-dropdown {
 	position: relative;
 	cursor: pointer;
 
@@ -57,8 +52,8 @@ body {
 		top: 100%;
 		left: 0;
 		width: 100%;
-		background-color: #EBE0CC;
-		
+		background-color: #ebe0cc;
+
 		li {
 			display: flex;
 			flex-direction: column;
@@ -74,17 +69,16 @@ body {
 			color: variables.$black;
 			text-decoration: none;
 			cursor: pointer;
-			
 
 			&:last-child {
 				border-bottom-width: 1px;
 			}
 
 			&:hover {
-				background-color: rgba(255,255,255,0.3);
+				background-color: rgba(255, 255, 255, 0.3);
 			}
 			&.active {
-				background-color: rgba(255,255,255,0.5);
+				background-color: rgba(255, 255, 255, 0.5);
 			}
 
 			small {
@@ -96,13 +90,10 @@ body {
 	}
 }
 
-
 // Filled Spacer: in the 2021 site, this is a grid item that's just filled with maroon
 .filled-spacer {
 	background-color: variables.$dark_spacer;
 }
-
-
 
 // Main Title: "Student Portfolio Review"
 .main-title {
@@ -116,7 +107,7 @@ body {
 	h1 {
 		font-weight: 300;
 		font-size: 11vw;
-        @include mixins.mobile {
+		@include mixins.mobile {
 			font-size: 20vw;
 		}
 		span:nth-child(2) {
@@ -140,7 +131,7 @@ body {
 	text-align: center;
 	display: flex;
 	justify-content: center;
-    flex-direction: column;
+	flex-direction: column;
 	&.main-title-mobile-student {
 		font-size: 13vw;
 		text-transform: uppercase;
@@ -157,7 +148,6 @@ body {
 		letter-spacing: 0.1em;
 	}
 }
-
 
 // Big Letters: the big ass letters on the top section that spell out "CIRCUS"
 .big-letter {
@@ -206,7 +196,6 @@ body {
 	}
 }
 
-
 // Star Line: the horizontal bar with 4 variables.$black stars in it
 .star-line {
 	display: flex;
@@ -218,14 +207,9 @@ body {
 	&.star-line-corner {
 		img {
 			height: 25%;
-		}	
+		}
 	}
 }
-
-
-
-
-
 
 // Featured People: people in the upper grid
 .featured-person {
@@ -233,26 +217,24 @@ body {
 	background-position: bottom center;
 	background-repeat: no-repeat;
 	&.featured-person-orange {
-		background-color: #DB7D42;
+		background-color: #db7d42;
 		background-image: url('../img/featured-person-1.png');
 	}
 	&.featured-person-blue {
-		background-color: #6889AA;
+		background-color: #6889aa;
 		background-image: url('../img/featured-person-2.png');
 	}
 	&.featured-person-peach {
-		background-color: #EBB29D;
+		background-color: #ebb29d;
 		background-image: url('../img/featured-person-3.png');
 	}
 }
-
-
 
 .student {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	
+
 	&.student-flipped {
 		@include mixins.desktop {
 			figcaption {
@@ -270,44 +252,43 @@ body {
 
 	&.student-purple {
 		figure {
-			background-color: #AC9DEB;
+			background-color: #ac9deb;
 		}
 	}
 	&.student-pink {
 		figure {
-			background-color: #EB9DAF;
+			background-color: #eb9daf;
 		}
 	}
 	&.student-blue {
 		figure {
-			background-color: #89A5D3;
+			background-color: #89a5d3;
 		}
 	}
 	&.student-green {
 		figure {
-			background-color: #68AA81;
+			background-color: #68aa81;
 		}
 	}
 	&.student-orange {
 		figure {
-			background-color: #D1986E;
+			background-color: #d1986e;
 		}
 	}
 	&.student-yellow {
 		figure {
-			background-color: #DBBE42;
+			background-color: #dbbe42;
 		}
 	}
 	&.student-dark-blue {
 		figure {
-			background-color: #6877AA;
+			background-color: #6877aa;
 		}
 	}
 
-
 	figure {
 		// the photo
-		background: rgba(0,0,0,0.2);
+		background: rgba(0, 0, 0, 0.2);
 		width: 50%;
 		position: relative;
 		height: 0;
@@ -321,6 +302,18 @@ body {
 			width: 100%;
 			height: auto;
 			top: 0;
+
+			display: none;
+
+			&:nth-child(1) {
+				display: block;
+			}
+			&.hide {
+				display: none !important;
+			}
+			&.show {
+				display: block !important;
+			}
 		}
 	}
 	figcaption {
@@ -330,24 +323,28 @@ body {
 		justify-content: center;
 		padding: 1vw;
 		font-size: 2vw;
-        @include mixins.mobile {
+		@include mixins.mobile {
 			width: percentage(5/12);
 			font-size: 4vw;
 		}
 
-		h3 { // name
+		h3 {
+			// name
 			font-size: 1.4em;
 			margin: 0.2em 0;
 		}
-		h4 { // program
+		h4 {
+			// program
 			font-size: 0.9em;
 			margin: 0.2em 0;
 		}
-		h5 { // status
+		h5 {
+			// status
 			font-size: 0.75em;
 			margin: 0.2em 0;
 		}
-		p { // buttons
+		p {
+			// buttons
 			margin: 0.5em 0;
 			a {
 				display: inline-block;
@@ -359,14 +356,14 @@ body {
 				color: variables.$black;
 				text-decoration: none;
 				&:hover {
-					background-color: rgba(255,255,255,0.3);
+					background-color: rgba(255, 255, 255, 0.3);
 				}
 			}
 		}
 	}
 
 	.spacer {
-		width:100%;
+		width: 100%;
 		height: percentage(1/4);
 		display: flex;
 		div {
@@ -376,7 +373,8 @@ body {
 			// height: 100%;
 			@include mixins.bt;
 			@include mixins.bl;
-			img { // stars
+			img {
+				// stars
 				position: absolute;
 				left: 50%;
 				top: 50%;
@@ -398,6 +396,4 @@ body {
 			}
 		}
 	}
-	
-
 }
