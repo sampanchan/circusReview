@@ -110,11 +110,11 @@ allStudents.forEach(function (student) {
     });
   };
 
-  student.addEventListener('mouseenter', function () {
+  student.querySelector('.student-content').addEventListener('mouseenter', function () {
     changeImage();
     intervalID = setInterval(changeImage, 500);
   });
-  student.addEventListener('mouseleave', function () {
+  student.querySelector('.student-content').addEventListener('mouseleave', function () {
     clearInterval(intervalID);
     currentPhotoIndex = 0;
     photos.forEach(function (photo, i) {

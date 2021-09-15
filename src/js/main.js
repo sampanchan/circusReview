@@ -89,11 +89,11 @@ allStudents.forEach((student) => {
 		});
 	};
 
-	student.addEventListener('mouseenter', () => {
+	student.querySelector('.student-content').addEventListener('mouseenter', () => {
 		changeImage();
 		intervalID = setInterval(changeImage, 500);
 	});
-	student.addEventListener('mouseleave', () => {
+	student.querySelector('.student-content').addEventListener('mouseleave', () => {
 		clearInterval(intervalID);
 		currentPhotoIndex = 0;
 		photos.forEach((photo, i) => {
