@@ -1,32 +1,66 @@
 @use "variables";
 
 //small devices
-@mixin  bp-small {
-    @media screen and (min-width: variables.$breakpoint-phone) {
-        
+// @mixin  bp-small {
+//     @media screen and (min-width: variables.$breakpoint-phone) {
+//         @content;
+//     }
+// }
+
+
+// //medium devices
+// @mixin bp-medium {
+//     @media screen and (min-width: variables.$breakpoint-tablet) {
+//         @content;
+//     }
+// }
+
+// //Large devices
+// @mixin bp-large {
+//     @media screen and (min-width: variables.$breakpoint-desktop) {
+//         @content;
+//     }
+// }
+
+// //XL devices
+// @mixin bp-xl {
+//     @media screen and (min-width: variables.$breakpoint-xl) {
+//         @content;
+//     }    
+// }
+
+@mixin mobile {
+    @media screen and (max-width: variables.$breakpoint-phone) {
         @content;
-    }
+    }   
+}
+@mixin desktop {
+    @media screen and (min-width: variables.$breakpoint-phone - 1) {
+        @content;
+    }   
+}
+@mixin mobile-hide {
+    @media screen and (max-width: variables.$breakpoint-phone) {
+        display: none;
+    }   
+}
+@mixin desktop-hide {
+    @media screen and (min-width: variables.$breakpoint-phone - 1) {
+        display: none;
+    }   
 }
 
 
-//medium devices
-@mixin bp-medium {
-    @media screen and (min-width: variables.$breakpoint-tablet) {
-        @content;
-    }
-}
 
-//Large devices
-@mixin bp-large {
-    @media screen and (min-width: variables.$breakpoint-desktop) {
-        @content;
-    }
+@mixin bt {
+    border-top: 1px solid variables.$black;
 }
-
-//XL devices
-@mixin bp-xl {
-    @media screen and (min-width: variables.$breakpoint-xl) {
-        @content;
-    }
-    
+@mixin bl {
+    border-left: 1px solid variables.$black;
+}
+@mixin br {
+    border-right: 1px solid variables.$black;
+}
+@mixin bb {
+    border-bottom: 1px solid variables.$black;
 }

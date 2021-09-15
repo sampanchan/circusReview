@@ -1,0 +1,403 @@
+@use "variables";
+@use "mixins";
+
+body {
+	background: variables.$site_background;
+	font-family: variables.$main-font;
+	overflow:scroll;
+}
+
+
+
+
+
+// Logo: duh
+.logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	img {
+		height: 70%;
+		transition: 1s;
+		&:hover {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+
+// Nav: typography for all nav items
+.nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.70vw;
+	letter-spacing: 0.05em;
+	
+	@include mixins.mobile {
+		font-size: 4vw;
+	}
+}
+
+// Nav Dropdown: quarter or program in the top nav
+.nav-dropdown  {
+	position: relative;
+	cursor: pointer;
+
+	&:hover {
+		ul {
+			display: block;
+		}
+	}
+	ul {
+		position: absolute;
+		display: none;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: #EBE0CC;
+		
+		li {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid variables.$black;
+			border-bottom-width: 0;
+			font-size: 0.8em;
+			line-height: 1.2em;
+			text-align: center;
+			min-height: variables.$column * 1.5;
+			padding: 0 1vw;
+			color: variables.$black;
+			text-decoration: none;
+			cursor: pointer;
+			
+
+			&:last-child {
+				border-bottom-width: 1px;
+			}
+
+			&:hover {
+				background-color: rgba(255,255,255,0.3);
+			}
+			&.active {
+				background-color: rgba(255,255,255,0.5);
+			}
+
+			small {
+				display: block;
+				font-size: 0.8em;
+				opacity: 0.5;
+			}
+		}
+	}
+}
+
+
+// Filled Spacer: in the 2021 site, this is a grid item that's just filled with maroon
+.filled-spacer {
+	background-color: variables.$dark_spacer;
+}
+
+
+
+// Main Title: "Student Portfolio Review"
+.main-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 0 0 2vw;
+	@include mixins.mobile {
+		padding: 0 0 0 6vw;
+	}
+	h1 {
+		font-weight: 300;
+		font-size: 11vw;
+        @include mixins.mobile {
+			font-size: 20vw;
+		}
+		span:nth-child(2) {
+			font-size: 0.85em;
+		}
+		span:nth-child(3) {
+			font-size: 0.7em;
+		}
+
+		span {
+			transition: letter-spacing 0.3s;
+			&:hover {
+				letter-spacing: 0.03em;
+			}
+		}
+	}
+}
+
+// Main Title Mobile: "Student Portfolio Review", but the mobile version is structured completely differently
+.main-title-mobile {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+	&.main-title-mobile-student {
+		font-size: 13vw;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+	&.main-title-mobile-portfolio {
+		font-size: 20vw;
+		// text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+	&.main-title-mobile-review {
+		font-size: 14vw;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+}
+
+
+// Big Letters: the big ass letters on the top section that spell out "CIRCUS"
+.big-letter {
+	position: relative;
+	font-size: 9vw;
+	text-transform: uppercase;
+	text-align: center;
+	overflow: hidden;
+	span {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		transform: translate(-50%, -50%);
+	}
+	&.animate {
+		span {
+			animation-name: big-letter-right;
+			animation-duration: 1s;
+			animation-fill-mode: both;
+		}
+	}
+	&.big-letter-c1.animate {
+		span {
+			animation-name: big-letter-down;
+		}
+	}
+	&.big-letter-i.animate {
+		span {
+			animation-name: big-letter-up;
+		}
+	}
+	&.big-letter-r.animate {
+		span {
+			animation-name: big-letter-left;
+		}
+	}
+	&.big-letter-u.animate {
+		span {
+			animation-name: big-letter-left;
+		}
+	}
+	&.big-letter-s.animate {
+		span {
+			animation-name: big-letter-down;
+		}
+	}
+}
+
+
+// Star Line: the horizontal bar with 4 variables.$black stars in it
+.star-line {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	img {
+		height: 50%;
+	}
+	&.star-line-corner {
+		img {
+			height: 25%;
+		}	
+	}
+}
+
+
+
+
+
+
+// Featured People: people in the upper grid
+.featured-person {
+	background-size: contain;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	&.featured-person-orange {
+		background-color: #DB7D42;
+		background-image: url('../img/featured-person-1.png');
+	}
+	&.featured-person-blue {
+		background-color: #6889AA;
+		background-image: url('../img/featured-person-2.png');
+	}
+	&.featured-person-peach {
+		background-color: #EBB29D;
+		background-image: url('../img/featured-person-3.png');
+	}
+}
+
+
+
+.student {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	&.student-flipped {
+		@include mixins.desktop {
+			figcaption {
+				order: -1;
+			}
+		}
+	}
+	&.student-flipped-mobile {
+		@include mixins.mobile {
+			figcaption {
+				order: -1;
+			}
+		}
+	}
+
+	&.student-purple {
+		figure {
+			background-color: #AC9DEB;
+		}
+	}
+	&.student-pink {
+		figure {
+			background-color: #EB9DAF;
+		}
+	}
+	&.student-blue {
+		figure {
+			background-color: #89A5D3;
+		}
+	}
+	&.student-green {
+		figure {
+			background-color: #68AA81;
+		}
+	}
+	&.student-orange {
+		figure {
+			background-color: #D1986E;
+		}
+	}
+	&.student-yellow {
+		figure {
+			background-color: #DBBE42;
+		}
+	}
+	&.student-dark-blue {
+		figure {
+			background-color: #6877AA;
+		}
+	}
+
+
+	figure {
+		// the photo
+		background: rgba(0,0,0,0.2);
+		width: 50%;
+		position: relative;
+		height: 0;
+		padding-bottom: 50%;
+		@include mixins.mobile {
+			width: percentage(7/12);
+			padding-bottom: percentage(7/12);
+		}
+		img {
+			position: absolute;
+			width: 100%;
+			height: auto;
+			top: 0;
+		}
+	}
+	figcaption {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1vw;
+		font-size: 2vw;
+        @include mixins.mobile {
+			width: percentage(5/12);
+			font-size: 4vw;
+		}
+
+		h3 { // name
+			font-size: 1.4em;
+			margin: 0.2em 0;
+		}
+		h4 { // program
+			font-size: 0.9em;
+			margin: 0.2em 0;
+		}
+		h5 { // status
+			font-size: 0.75em;
+			margin: 0.2em 0;
+		}
+		p { // buttons
+			margin: 0.5em 0;
+			a {
+				display: inline-block;
+				font-size: 0.6em;
+				padding: 0.6em 0.9em;
+				margin-top: 0.5em;
+				border: 1px solid variables.$black;
+				border-radius: 100px;
+				color: variables.$black;
+				text-decoration: none;
+				&:hover {
+					background-color: rgba(255,255,255,0.3);
+				}
+			}
+		}
+	}
+
+	.spacer {
+		width:100%;
+		height: percentage(1/4);
+		display: flex;
+		div {
+			display: flex;
+			position: relative;
+			flex-grow: 1;
+			// height: 100%;
+			@include mixins.bt;
+			@include mixins.bl;
+			img { // stars
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				height: 25%;
+			}
+		}
+		div:nth-child(1) {
+			border-left-width: 0;
+		}
+		&.spacer-2-1 {
+			div:nth-child(1) {
+				flex-grow: 2;
+			}
+		}
+		&.spacer-1-2 {
+			div:nth-child(2) {
+				flex-grow: 2;
+			}
+		}
+	}
+	
+
+}
