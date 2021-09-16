@@ -136,147 +136,115 @@ table {
 
 @-webkit-keyframes big-letter-right {
 	0% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 	50% {
-		-webkit-transform: translate(100%, -50%);
-		        transform: translate(100%, -50%);
+		transform: translate(100%, -50%);
 	}
 	51% {
-		-webkit-transform: translate(-150%, -50%);
-		        transform: translate(-150%, -50%);
+		transform: translate(-150%, -50%);
 	}
 	100% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 }
 
 @keyframes big-letter-right {
 	0% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 	50% {
-		-webkit-transform: translate(100%, -50%);
-		        transform: translate(100%, -50%);
+		transform: translate(100%, -50%);
 	}
 	51% {
-		-webkit-transform: translate(-150%, -50%);
-		        transform: translate(-150%, -50%);
+		transform: translate(-150%, -50%);
 	}
 	100% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 }
 @-webkit-keyframes big-letter-left {
 	0% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 	50% {
-		-webkit-transform: translate(-150%, -50%);
-		        transform: translate(-150%, -50%);
+		transform: translate(-150%, -50%);
 	}
 	51% {
-		-webkit-transform: translate(100%, -50%);
-		        transform: translate(100%, -50%);
+		transform: translate(100%, -50%);
 	}
 	100% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 }
 @keyframes big-letter-left {
 	0% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 	50% {
-		-webkit-transform: translate(-150%, -50%);
-		        transform: translate(-150%, -50%);
+		transform: translate(-150%, -50%);
 	}
 	51% {
-		-webkit-transform: translate(100%, -50%);
-		        transform: translate(100%, -50%);
+		transform: translate(100%, -50%);
 	}
 	100% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 }
 @-webkit-keyframes big-letter-up {
 	0% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 	50% {
-		-webkit-transform: translate(-50%, -170%);
-		        transform: translate(-50%, -170%);
+		transform: translate(-50%, -170%);
 	}
 	51% {
-		-webkit-transform: translate(-50%, 100%);
-		        transform: translate(-50%, 100%);
+		transform: translate(-50%, 100%);
 	}
 	100% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 }
 @keyframes big-letter-up {
 	0% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 	50% {
-		-webkit-transform: translate(-50%, -170%);
-		        transform: translate(-50%, -170%);
+		transform: translate(-50%, -170%);
 	}
 	51% {
-		-webkit-transform: translate(-50%, 100%);
-		        transform: translate(-50%, 100%);
+		transform: translate(-50%, 100%);
 	}
 	100% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 }
 @-webkit-keyframes big-letter-down {
 	0% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 	50% {
-		-webkit-transform: translate(-50%, 120%);
-		        transform: translate(-50%, 120%);
+		transform: translate(-50%, 120%);
 	}
 	51% {
-		-webkit-transform: translate(-50%, -150%);
-		        transform: translate(-50%, -150%);
+		transform: translate(-50%, -150%);
 	}
 	100% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 }
 @keyframes big-letter-down {
 	0% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 	50% {
-		-webkit-transform: translate(-50%, 120%);
-		        transform: translate(-50%, 120%);
+		transform: translate(-50%, 120%);
 	}
 	51% {
-		-webkit-transform: translate(-50%, -150%);
-		        transform: translate(-50%, -150%);
+		transform: translate(-50%, -150%);
 	}
 	100% {
-		-webkit-transform: translate(-50%, -50%);
-		        transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
 	}
 }
 .the-mega-grid {
@@ -551,8 +519,8 @@ body {
 	transition: 1s;
 }
 .logo img:hover {
-	-webkit-transform: rotate(360deg);
-	        transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	    transform: rotate(360deg);
 }
 
 .nav {
@@ -684,8 +652,8 @@ body {
 	position: absolute;
 	top: 50%;
 	width: 100%;
-	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
 }
 .big-letter.animate span {
 	-webkit-animation-name: big-letter-right;
@@ -834,12 +802,17 @@ body {
 	margin: 0.2em 0;
 }
 .student .student-content figcaption h4 {
-	font-size: 0.9em;
-	margin: 0.2em 0;
+	font-size: 0.95em;
+	margin: 0.15em 0 0.2em;
+	font-style: italic;
 }
 .student .student-content figcaption h5 {
-	font-size: 0.75em;
-	margin: 0.2em 0;
+	font-size: 0.65em;
+	margin: 0.5em 0 0.25em;
+}
+.student .student-content figcaption h6 {
+	font-size: 0.65em;
+	margin: 0 0;
 }
 .student .student-content figcaption p {
 	margin: 0.5em 0;
@@ -873,8 +846,8 @@ body {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
 	height: 25%;
 }
 .student .spacer div:nth-child(1) {
