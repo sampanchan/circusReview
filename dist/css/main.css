@@ -136,115 +136,147 @@ table {
 
 @-webkit-keyframes big-letter-right {
 	0% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 	50% {
-		transform: translate(100%, -50%);
+		-webkit-transform: translate(100%, -50%);
+		        transform: translate(100%, -50%);
 	}
 	51% {
-		transform: translate(-150%, -50%);
+		-webkit-transform: translate(-150%, -50%);
+		        transform: translate(-150%, -50%);
 	}
 	100% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 }
 
 @keyframes big-letter-right {
 	0% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 	50% {
-		transform: translate(100%, -50%);
+		-webkit-transform: translate(100%, -50%);
+		        transform: translate(100%, -50%);
 	}
 	51% {
-		transform: translate(-150%, -50%);
+		-webkit-transform: translate(-150%, -50%);
+		        transform: translate(-150%, -50%);
 	}
 	100% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 }
 @-webkit-keyframes big-letter-left {
 	0% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 	50% {
-		transform: translate(-150%, -50%);
+		-webkit-transform: translate(-150%, -50%);
+		        transform: translate(-150%, -50%);
 	}
 	51% {
-		transform: translate(100%, -50%);
+		-webkit-transform: translate(100%, -50%);
+		        transform: translate(100%, -50%);
 	}
 	100% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 }
 @keyframes big-letter-left {
 	0% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 	50% {
-		transform: translate(-150%, -50%);
+		-webkit-transform: translate(-150%, -50%);
+		        transform: translate(-150%, -50%);
 	}
 	51% {
-		transform: translate(100%, -50%);
+		-webkit-transform: translate(100%, -50%);
+		        transform: translate(100%, -50%);
 	}
 	100% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 }
 @-webkit-keyframes big-letter-up {
 	0% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 	50% {
-		transform: translate(-50%, -170%);
+		-webkit-transform: translate(-50%, -170%);
+		        transform: translate(-50%, -170%);
 	}
 	51% {
-		transform: translate(-50%, 100%);
+		-webkit-transform: translate(-50%, 100%);
+		        transform: translate(-50%, 100%);
 	}
 	100% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 }
 @keyframes big-letter-up {
 	0% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 	50% {
-		transform: translate(-50%, -170%);
+		-webkit-transform: translate(-50%, -170%);
+		        transform: translate(-50%, -170%);
 	}
 	51% {
-		transform: translate(-50%, 100%);
+		-webkit-transform: translate(-50%, 100%);
+		        transform: translate(-50%, 100%);
 	}
 	100% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 }
 @-webkit-keyframes big-letter-down {
 	0% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 	50% {
-		transform: translate(-50%, 120%);
+		-webkit-transform: translate(-50%, 120%);
+		        transform: translate(-50%, 120%);
 	}
 	51% {
-		transform: translate(-50%, -150%);
+		-webkit-transform: translate(-50%, -150%);
+		        transform: translate(-50%, -150%);
 	}
 	100% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 }
 @keyframes big-letter-down {
 	0% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 	50% {
-		transform: translate(-50%, 120%);
+		-webkit-transform: translate(-50%, 120%);
+		        transform: translate(-50%, 120%);
 	}
 	51% {
-		transform: translate(-50%, -150%);
+		-webkit-transform: translate(-50%, -150%);
+		        transform: translate(-50%, -150%);
 	}
 	100% {
-		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
 	}
 }
 .the-mega-grid {
@@ -519,8 +551,8 @@ body {
 	transition: 1s;
 }
 .logo img:hover {
-	-ms-transform: rotate(360deg);
-	    transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	        transform: rotate(360deg);
 }
 
 .nav {
@@ -652,8 +684,8 @@ body {
 	position: absolute;
 	top: 50%;
 	width: 100%;
-	-ms-transform: translate(-50%, -50%);
-	    transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 }
 .big-letter.animate span {
 	-webkit-animation-name: big-letter-right;
@@ -703,15 +735,15 @@ body {
 }
 .featured-person.featured-person-orange {
 	background-color: #db7d42;
-	background-image: url("../img/featured-person-1.png");
+	background-image: url("../img/optamizedStudents/drbalSammi/SDrbal-portfolioreview-2.png");
 }
 .featured-person.featured-person-blue {
 	background-color: #6889aa;
-	background-image: url("../img/featured-person-2.png");
+	background-image: url("../img/optamizedStudents/simonMichael/michael_3.png");
 }
 .featured-person.featured-person-peach {
 	background-color: #ebb29d;
-	background-image: url("../img/featured-person-3.png");
+	background-image: url("../img/optamizedStudents/chungAbigail/abigail_2.png");
 }
 
 .student {
@@ -845,8 +877,8 @@ body {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	-ms-transform: translate(-50%, -50%);
-	    transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	height: 25%;
 }
 .student .spacer div:nth-child(1) {
