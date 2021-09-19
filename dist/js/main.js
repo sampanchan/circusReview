@@ -240,4 +240,13 @@ featuredStudents.forEach(function (student, i) {
     duration: 5
   });
 });
+document.querySelector('[href="#top"]').addEventListener('click', function (e) {
+  e.preventDefault();
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: 0,
+    delay: 0.15,
+    ease: 'power1.inOut'
+  });
+});
 //# sourceMappingURL=main.js.map

@@ -262,18 +262,10 @@ body {
 
 .student {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-direction: column;
 
-	&.student-flipped {
-		@include mixins.desktop {
-			figcaption {
-				order: -1;
-			}
-		}
-	}
-	&.student-flipped-mobile {
-		@include mixins.mobile {
+	@include mixins.mobile {
+		&:nth-child(odd) {
 			figcaption {
 				order: -1;
 			}
@@ -318,6 +310,7 @@ body {
 	.student-content {
 		width: 100%;
 		display: flex;
+		// flex-grow: 3;
 
 		figure {
 			// the photo
@@ -354,9 +347,10 @@ body {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			padding: 1vw;
 			font-size: 2vw;
+			padding: 1vw 1vw;
 			@include mixins.mobile {
+				padding: 1vw 2vw;
 				width: percentage(5/12);
 				font-size: 4vw;
 			}
@@ -404,7 +398,8 @@ body {
 
 	.spacer {
 		width: 100%;
-		height: percentage(1/4);
+		// height: percentage(1/4);
+		flex-grow: 2;
 		display: flex;
 		div {
 			display: flex;
@@ -433,6 +428,30 @@ body {
 		&.spacer-1-2 {
 			div:nth-child(2) {
 				flex-grow: 2;
+			}
+		}
+	}
+}
+
+.end-cap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	a {
+		font-size: 1.6em;
+		color: black;
+		text-decoration: none;
+		&:hover {
+			span.text {
+				text-decoration: underline;
+			}
+			span.bouncer {
+				position: relative;
+				animation-name: bounce-arrow;
+				animation-duration: 1s;
+				// animation-direction: alternate;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
 			}
 		}
 	}

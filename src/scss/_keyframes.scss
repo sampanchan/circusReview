@@ -3,13 +3,13 @@
 @keyframes big-letter-right {
 	0% {
 		transform: translate(-50%, -50%);
-	}			
+	}
 	50% {
 		transform: translate(100%, -50%);
-	}		
+	}
 	51% {
 		transform: translate(-150%, -50%);
-	}		
+	}
 	100% {
 		transform: translate(-50%, -50%);
 	}
@@ -17,13 +17,13 @@
 @keyframes big-letter-left {
 	0% {
 		transform: translate(-50%, -50%);
-	}			
+	}
 	50% {
 		transform: translate(-150%, -50%);
-	}		
+	}
 	51% {
 		transform: translate(100%, -50%);
-	}		
+	}
 	100% {
 		transform: translate(-50%, -50%);
 	}
@@ -31,13 +31,13 @@
 @keyframes big-letter-up {
 	0% {
 		transform: translate(-50%, -50%);
-	}			
+	}
 	50% {
 		transform: translate(-50%, -170%);
-	}		
+	}
 	51% {
 		transform: translate(-50%, 100%);
-	}		
+	}
 	100% {
 		transform: translate(-50%, -50%);
 	}
@@ -45,14 +45,27 @@
 @keyframes big-letter-down {
 	0% {
 		transform: translate(-50%, -50%);
-	}			
+	}
 	50% {
 		transform: translate(-50%, 120%);
-	}		
+	}
 	51% {
 		transform: translate(-50%, -150%);
-	}		
+	}
 	100% {
 		transform: translate(-50%, -50%);
+	}
+}
+
+@keyframes bounce-arrow {
+	0%,
+	100% {
+		top: 0em;
+	}
+	25% {
+		top: -0.25em;
+	}
+	75% {
+		top: 0.25em;
 	}
 }

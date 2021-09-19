@@ -141,3 +141,8 @@ featuredStudents.forEach((student, i) => {
 	tl.to(images[0], { x: '0%', duration: 1, ease: 'power1.easeInOut' }, 'part3+=0.4');
 	tl.to({}, { duration: 5 });
 });
+
+document.querySelector('[href="#top"]').addEventListener('click', (e) => {
+	e.preventDefault();
+	gsap.to(window, { duration: 1, scrollTo: 0, delay: 0.15, ease: 'power1.inOut' });
+});

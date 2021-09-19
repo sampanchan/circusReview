@@ -16,7 +16,7 @@
 
 	@include mixins.mobile {
 		grid-template-columns: repeat(12, variables.$column-mobile);
-		grid-template-rows: repeat(120, variables.$column-mobile);
+		grid-auto-rows: variables.$column-mobile;
 	}
 
 	> * {
@@ -209,7 +209,7 @@
 		grid-column: 13 / span 12;
 		grid-row: 16 / span 4;
 		@include mixins.mobile {
-			grid-row-end: span 7;
+			display: none;
 		}
 	}
 
@@ -217,7 +217,12 @@
 		grid-column-end: span 12;
 		grid-row-end: span 8;
 		@include mixins.mobile {
-			grid-row-end: span 7;
+			grid-row-end: span 9;
 		}
+	}
+
+	.end-cap {
+		grid-column-end: span 12;
+		grid-row-end: span 4;
 	}
 }
