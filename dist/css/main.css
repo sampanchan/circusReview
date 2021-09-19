@@ -251,7 +251,7 @@ table {
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(24, 4.1666666667vw);
-	grid-template-rows: repeat(15, 4.1666666667vw);
+	grid-auto-rows: 4.1666666667vw;
 }
 @media screen and (max-width: 576px) {
 	.the-mega-grid {
@@ -492,6 +492,24 @@ table {
 	grid-row-end: span 6;
 	grid-column-end: span 6;
 }
+.the-mega-grid .spacer-top-of-students {
+	grid-column: 13/span 12;
+	grid-row: 16/span 4;
+}
+@media screen and (max-width: 576px) {
+	.the-mega-grid .spacer-top-of-students {
+		grid-row-end: span 7;
+	}
+}
+.the-mega-grid .student {
+	grid-column-end: span 12;
+	grid-row-end: span 8;
+}
+@media screen and (max-width: 576px) {
+	.the-mega-grid .student {
+		grid-row-end: span 7;
+	}
+}
 
 body {
 	background: #EBE0CC;
@@ -719,104 +737,88 @@ body {
 	    transform: translateX(0%);
 }
 
-.student-container {
-	-webkit-columns: 2;
-	        columns: 2;
-	-webkit-column-gap: 0px;
-	        column-gap: 0px;
-}
-.student-container .spacer-top-of-students {
-	border-top: 1px solid #202020;
-	border-left: 1px solid #202020;
+.spacer-top-of-students {
 	display: flex;
-	width: 50vw;
-	height: 12.5vw;
 }
-.student-container .spacer-top-of-students div {
+.spacer-top-of-students div {
 	flex-grow: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.student-container .spacer-top-of-students div img {
+.spacer-top-of-students div img {
 	height: 15%;
 }
-.student-container .student {
-	border-top: 1px solid #202020;
-	border-left: 1px solid #202020;
-	width: 50vw;
-	height: 33.3333333333vw;
-	-webkit-column-break-inside: avoid;
-	        break-inside: avoid;
+
+.student {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
 @media screen and (min-width: 575px) {
-	.student-container .student.student-flipped figcaption {
+	.student.student-flipped figcaption {
 		order: -1;
 	}
 }
 @media screen and (max-width: 576px) {
-	.student-container .student.student-flipped-mobile figcaption {
+	.student.student-flipped-mobile figcaption {
 		order: -1;
 	}
 }
-.student-container .student.student-purple figure {
+.student.student-purple figure {
 	background-color: #ac9deb;
 }
-.student-container .student.student-pink figure {
+.student.student-pink figure {
 	background-color: #eb9daf;
 }
-.student-container .student.student-blue figure {
+.student.student-blue figure {
 	background-color: #89a5d3;
 }
-.student-container .student.student-green figure {
+.student.student-green figure {
 	background-color: #68aa81;
 }
-.student-container .student.student-orange figure {
+.student.student-orange figure {
 	background-color: #d1986e;
 }
-.student-container .student.student-yellow figure {
+.student.student-yellow figure {
 	background-color: #dbbe42;
 }
-.student-container .student.student-dark-blue figure {
+.student.student-dark-blue figure {
 	background-color: #6877aa;
 }
-.student-container .student .student-content {
+.student .student-content {
 	width: 100%;
-	height: 75%;
 	display: flex;
 }
-.student-container .student .student-content figure {
+.student .student-content figure {
 	width: 50%;
 	position: relative;
 	height: 0;
 	padding-bottom: 50%;
 }
 @media screen and (max-width: 576px) {
-	.student-container .student .student-content figure {
+	.student .student-content figure {
 		width: 58.3333333333%;
 		padding-bottom: 58.3333333333%;
 	}
 }
-.student-container .student .student-content figure img {
+.student .student-content figure img {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	display: none;
 }
-.student-container .student .student-content figure img:nth-child(1) {
+.student .student-content figure img:nth-child(1) {
 	display: block;
 }
-.student-container .student .student-content figure img.hide {
+.student .student-content figure img.hide {
 	display: none !important;
 }
-.student-container .student .student-content figure img.show {
+.student .student-content figure img.show {
 	display: block !important;
 }
-.student-container .student .student-content figcaption {
+.student .student-content figcaption {
 	width: 50%;
 	display: flex;
 	flex-direction: column;
@@ -825,32 +827,32 @@ body {
 	font-size: 2vw;
 }
 @media screen and (max-width: 576px) {
-	.student-container .student .student-content figcaption {
+	.student .student-content figcaption {
 		width: 41.6666666667%;
 		font-size: 4vw;
 	}
 }
-.student-container .student .student-content figcaption h3 {
+.student .student-content figcaption h3 {
 	font-size: 1.4em;
 	margin: 0.2em 0;
 }
-.student-container .student .student-content figcaption h4 {
+.student .student-content figcaption h4 {
 	font-size: 0.95em;
 	margin: 0.15em 0 0.2em;
 	font-style: italic;
 }
-.student-container .student .student-content figcaption h5 {
+.student .student-content figcaption h5 {
 	font-size: 0.65em;
 	margin: 0.5em 0 0.25em;
 }
-.student-container .student .student-content figcaption h6 {
+.student .student-content figcaption h6 {
 	font-size: 0.65em;
 	margin: 0 0;
 }
-.student-container .student .student-content figcaption p {
+.student .student-content figcaption p {
 	margin: 0.5em 0;
 }
-.student-container .student .student-content figcaption p a {
+.student .student-content figcaption p a {
 	display: inline-block;
 	font-size: 0.6em;
 	padding: 0.68em 0.9em 0.52em;
@@ -860,22 +862,22 @@ body {
 	color: #202020;
 	text-decoration: none;
 }
-.student-container .student .student-content figcaption p a:hover {
+.student .student-content figcaption p a:hover {
 	background-color: rgba(255, 255, 255, 0.5);
 }
-.student-container .student .spacer {
+.student .spacer {
 	width: 100%;
 	height: 25%;
 	display: flex;
 }
-.student-container .student .spacer div {
+.student .spacer div {
 	display: flex;
 	position: relative;
 	flex-grow: 1;
 	border-top: 1px solid #202020;
 	border-left: 1px solid #202020;
 }
-.student-container .student .spacer div img {
+.student .spacer div img {
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -883,13 +885,13 @@ body {
 	    transform: translate(-50%, -50%);
 	height: 25%;
 }
-.student-container .student .spacer div:nth-child(1) {
+.student .spacer div:nth-child(1) {
 	border-left-width: 0;
 }
-.student-container .student .spacer.spacer-2-1 div:nth-child(1) {
+.student .spacer.spacer-2-1 div:nth-child(1) {
 	flex-grow: 2;
 }
-.student-container .student .spacer.spacer-1-2 div:nth-child(2) {
+.student .spacer.spacer-1-2 div:nth-child(2) {
 	flex-grow: 2;
 }
 

@@ -247,206 +247,192 @@ body {
 	}
 }
 
-.student-container {
-	columns: 2;
-	column-gap: 0px;
-
-	.spacer-top-of-students {
-		@include mixins.bt;
-		@include mixins.bl;
+.spacer-top-of-students {
+	display: flex;
+	div {
+		flex-grow: 1;
 		display: flex;
-		width: 50vw;
-		height: 12.5vw;
-		div {
-			flex-grow: 1;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			img {
-				height: 15%;
+		justify-content: center;
+		align-items: center;
+		img {
+			height: 15%;
+		}
+	}
+}
+
+.student {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	&.student-flipped {
+		@include mixins.desktop {
+			figcaption {
+				order: -1;
+			}
+		}
+	}
+	&.student-flipped-mobile {
+		@include mixins.mobile {
+			figcaption {
+				order: -1;
 			}
 		}
 	}
 
-	.student {
-		@include mixins.bt;
-		@include mixins.bl;
-		width: 50vw;
-		height: 33.33333333333vw;
-		break-inside: avoid;
+	&.student-purple {
+		figure {
+			background-color: #ac9deb;
+		}
+	}
+	&.student-pink {
+		figure {
+			background-color: #eb9daf;
+		}
+	}
+	&.student-blue {
+		figure {
+			background-color: #89a5d3;
+		}
+	}
+	&.student-green {
+		figure {
+			background-color: #68aa81;
+		}
+	}
+	&.student-orange {
+		figure {
+			background-color: #d1986e;
+		}
+	}
+	&.student-yellow {
+		figure {
+			background-color: #dbbe42;
+		}
+	}
+	&.student-dark-blue {
+		figure {
+			background-color: #6877aa;
+		}
+	}
+	.student-content {
+		width: 100%;
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
 
-		&.student-flipped {
-			@include mixins.desktop {
-				figcaption {
-					order: -1;
-				}
-			}
-		}
-		&.student-flipped-mobile {
+		figure {
+			// the photo
+			// background: rgba(221, 201, 201, 0.2);
+			width: 50%;
+			position: relative;
+			height: 0;
+			padding-bottom: 50%;
 			@include mixins.mobile {
-				figcaption {
-					order: -1;
+				width: percentage(7/12);
+				padding-bottom: percentage(7/12);
+			}
+			img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+
+				display: none;
+
+				&:nth-child(1) {
+					display: block;
+				}
+				&.hide {
+					display: none !important;
+				}
+				&.show {
+					display: block !important;
 				}
 			}
 		}
-		&.student-purple {
-			figure {
-				background-color: #ac9deb;
-			}
-		}
-		&.student-pink {
-			figure {
-				background-color: #eb9daf;
-			}
-		}
-		&.student-blue {
-			figure {
-				background-color: #89a5d3;
-			}
-		}
-		&.student-green {
-			figure {
-				background-color: #68aa81;
-			}
-		}
-		&.student-orange {
-			figure {
-				background-color: #d1986e;
-			}
-		}
-		&.student-yellow {
-			figure {
-				background-color: #dbbe42;
-			}
-		}
-		&.student-dark-blue {
-			figure {
-				background-color: #6877aa;
-			}
-		}
-		.student-content {
-			width: 100%;
-			height: 75%;
+		figcaption {
+			width: 50%;
 			display: flex;
-
-			figure {
-				// the photo
-				// background: rgba(221, 201, 201, 0.2);
-				width: 50%;
-				position: relative;
-				height: 0;
-				padding-bottom: 50%;
-				@include mixins.mobile {
-					width: percentage(7/12);
-					padding-bottom: percentage(7/12);
-				}
-				img {
-					position: absolute;
-					width: 100%;
-					height: 100%;
-					top: 0;
-
-					display: none;
-
-					&:nth-child(1) {
-						display: block;
-					}
-					&.hide {
-						display: none !important;
-					}
-					&.show {
-						display: block !important;
-					}
-				}
+			flex-direction: column;
+			justify-content: center;
+			padding: 1vw;
+			font-size: 2vw;
+			@include mixins.mobile {
+				width: percentage(5/12);
+				font-size: 4vw;
 			}
-			figcaption {
-				width: 50%;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				padding: 1vw;
-				font-size: 2vw;
-				@include mixins.mobile {
-					width: percentage(5/12);
-					font-size: 4vw;
-				}
 
-				h3 {
-					// name
-					font-size: 1.4em;
-					margin: 0.2em 0;
-				}
-				h4 {
-					// program
-					font-size: 0.95em;
-					margin: 0.15em 0 0.2em;
-					font-style: italic;
-				}
-				h5 {
-					// grad status
-					font-size: 0.65em;
-					margin: 0.5em 0 0.25em;
-				}
-				h6 {
-					// hiring status
-					font-size: 0.65em;
-					margin: 0 0;
-				}
-				p {
-					// buttons
-					margin: 0.5em 0;
-					a {
-						display: inline-block;
-						font-size: 0.6em;
-						padding: 0.68em 0.9em 0.52em;
-						margin-top: 0.5em;
-						border: 1px solid variables.$black;
-						border-radius: 100px;
-						color: variables.$black;
-						text-decoration: none;
-						&:hover {
-							background-color: rgba(255, 255, 255, 0.5);
-						}
+			h3 {
+				// name
+				font-size: 1.4em;
+				margin: 0.2em 0;
+			}
+			h4 {
+				// program
+				font-size: 0.95em;
+				margin: 0.15em 0 0.2em;
+				font-style: italic;
+			}
+			h5 {
+				// grad status
+				font-size: 0.65em;
+				margin: 0.5em 0 0.25em;
+			}
+			h6 {
+				// hiring status
+				font-size: 0.65em;
+				margin: 0 0;
+			}
+			p {
+				// buttons
+				margin: 0.5em 0;
+				a {
+					display: inline-block;
+					font-size: 0.6em;
+					padding: 0.68em 0.9em 0.52em;
+					margin-top: 0.5em;
+					border: 1px solid variables.$black;
+					border-radius: 100px;
+					color: variables.$black;
+					text-decoration: none;
+					&:hover {
+						background-color: rgba(255, 255, 255, 0.5);
 					}
 				}
 			}
 		}
+	}
 
-		.spacer {
-			width: 100%;
-			height: percentage(1/4);
+	.spacer {
+		width: 100%;
+		height: percentage(1/4);
+		display: flex;
+		div {
 			display: flex;
-			div {
-				display: flex;
-				position: relative;
-				flex-grow: 1;
-				// height: 100%;
-				@include mixins.bt;
-				@include mixins.bl;
-				img {
-					// stars
-					position: absolute;
-					left: 50%;
-					top: 50%;
-					transform: translate(-50%, -50%);
-					height: 25%;
-				}
+			position: relative;
+			flex-grow: 1;
+			// height: 100%;
+			@include mixins.bt;
+			@include mixins.bl;
+			img {
+				// stars
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				height: 25%;
 			}
+		}
+		div:nth-child(1) {
+			border-left-width: 0;
+		}
+		&.spacer-2-1 {
 			div:nth-child(1) {
-				border-left-width: 0;
+				flex-grow: 2;
 			}
-			&.spacer-2-1 {
-				div:nth-child(1) {
-					flex-grow: 2;
-				}
-			}
-			&.spacer-1-2 {
-				div:nth-child(2) {
-					flex-grow: 2;
-				}
+		}
+		&.spacer-1-2 {
+			div:nth-child(2) {
+				flex-grow: 2;
 			}
 		}
 	}
