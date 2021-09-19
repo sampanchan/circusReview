@@ -80,6 +80,9 @@ body {
 			&.active {
 				background-color: rgba(255, 255, 255, 0.5);
 			}
+			&.clicked {
+				background-color: rgba(255, 255, 255, 1);
+			}
 
 			small {
 				display: block;
@@ -216,17 +219,44 @@ body {
 	background-size: contain;
 	background-position: bottom center;
 	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+
 	&.featured-person-orange {
 		background-color: #db7d42;
-		background-image: url('../img/optamizedStudents/drbalSammi/SDrbal-portfolioreview-2.png');
+		// background-image: url('../img/optamizedStudents/drbalSammi/SDrbal-portfolioreview-2.png');
 	}
 	&.featured-person-blue {
 		background-color: #6889aa;
-		background-image: url('../img/optamizedStudents/simonMichael/michael_3.png');
+		// background-image: url('../img/optamizedStudents/simonMichael/michael_3.png');
 	}
 	&.featured-person-peach {
 		background-color: #ebb29d;
-		background-image: url('../img/optamizedStudents/chungAbigail/abigail_2.png');
+		// background-image: url('../img/optamizedStudents/chungAbigail/abigail_2.png');
+	}
+
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		transform: translateX(110%);
+		&:nth-child(1) {
+			transform: translateX(0%);
+		}
+	}
+}
+
+.spacer-top-of-students {
+	display: flex;
+	div {
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			height: 15%;
+		}
 	}
 }
 
@@ -358,14 +388,14 @@ body {
 				a {
 					display: inline-block;
 					font-size: 0.6em;
-					padding: 0.6em 0.9em;
+					padding: 0.68em 0.9em 0.52em;
 					margin-top: 0.5em;
 					border: 1px solid variables.$black;
 					border-radius: 100px;
 					color: variables.$black;
 					text-decoration: none;
 					&:hover {
-						background-color: rgba(255, 255, 255, 0.3);
+						background-color: rgba(255, 255, 255, 0.5);
 					}
 				}
 			}

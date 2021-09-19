@@ -24,11 +24,11 @@
 				<img src="dist/img/the-creative-circus-logo-png-transparent.png" />
 			</div>
 			<div class="nav nav-dropdown cohort-picker cohort-picker-top">
-				Quarter
+				Grad Status
 				<ul>
 					<li class="active" data-cohort="all">All</li>
-					<li data-cohort="summer">Summer 2021<small>(medium well)</small></li>
-					<li data-cohort="fall">Fall 2021 <small>(rare)</small></li>
+					<li data-cohort="grad">Graduated</li>
+					<li data-cohort="not">Almost Graduated</li>
 				</ul>
 			</div>
 			<div class="nav-spacer filled-spacer"></div>
@@ -39,8 +39,8 @@
 					<li data-program="copywriting">Copywriting</li>
 					<li data-program="artdirection">Art Direction</li>
 					<li data-program="design">Design</li>
-					<li data-program="photography">Photography & Content Creation</li>
-					<li data-program="creativetechnology">Creative Technology</li>
+					<!-- <li data-program="photography">Photography & Content Creation</li>
+					<li data-program="creativetechnology">Creative Technology</li> -->
 				</ul>
 			</div>
 			<div class="nav faq-button">FAQ</div>
@@ -60,8 +60,8 @@
 			</div>
 			<div class="main-title">
 				<h1>
-					<span>Student </span>
-					<span>Portfolio </span>
+					<span>Student</span>
+					<span>Portfolio</span>
 					<span>Review</span>
 				</h1>
 			</div>
@@ -83,9 +83,23 @@
 			<div class="big-letter big-letter-c2"><span>c</span></div>
 			<div class="big-letter big-letter-u"><span>u</span></div>
 			<div class="big-letter big-letter-s"><span>s</span></div>
-			<div class="featured-person featured-person-1 featured-person-orange"></div>
-			<div class="featured-person featured-person-2 featured-person-blue"></div>
-			<div class="featured-person featured-person-3 featured-person-peach"></div>
+
+			<!-- put exactly 3 students in each -->
+			<div class="featured-person featured-person-1 featured-person-orange">
+				<img src="dist/img/optimized-students/chungAbigail/abigail_1.png" alt="abigail" />
+				<img src="dist/img/optimized-students/ghaliLena/PortoflioReview-1.png" alt="lena" />
+				<img src="dist/img/optimized-students/azbellKelly/image0.png" alt="kelly" />
+			</div>
+			<div class="featured-person featured-person-2 featured-person-blue">
+				<img src="dist/img/optimized-students/drbalSammi/SDrbal-portfolioreview-2.png" alt="sammi" />
+				<img src="dist/img/optimized-students/rozierRand/rand holding dog.png" alt="rand" />
+				<img src="dist/img/optimized-students/newsomeHannah/Hannah Newsome 1.png" alt="hannah" />
+			</div>
+			<div class="featured-person featured-person-3 featured-person-peach">
+				<img src="dist/img/optimized-students/ullmanShelby/Shelby Ullman 2.png" alt="shelby" />
+				<img src="dist/img/optimized-students/martinPatrick/1.png" alt="patrick" />
+				<img src="dist/img/optimized-students/gravelineClaire/Photo1.png" alt="claire" />
+			</div>
 
 			<!-- Extra boxes to create the lines we need -->
 			<div class="border-maker border-maker-1"></div>
@@ -97,11 +111,17 @@
 			<!-- Student List -->
 			<!-- After this point is the student list -->
 
-			<!-- <div class="student student-dark-blue" data-program="design" data-cohort="summer">
+			<div class="spacer-top-of-students">
+				<div><img src="dist/img/BlackStar.png" /></div>
+				<div><img src="dist/img/BlackStar.png" /></div>
+				<div><img src="dist/img/BlackStar.png" /></div>
+			</div>
+
+			<!-- <div class="student student-dark-blue" data-program="design" data-cohort="grad">
 				<div class="student-content">
 					<figure> -->
-						<!-- example of how it has 3 files in here, but some JS make all but one hidden, and animates through them on hover-->
-						<!-- <img src="dist/img/featured-person-2.png" />
+			<!-- example of how it has 3 files in here, but some JS make all but one hidden, and animates through them on hover-->
+			<!-- <img src="dist/img/featured-person-2.png" />
 						<img src="dist/img/featured-person-1.png" />
 						<img src="dist/img/featured-person-3.png" />
 					</figure>
@@ -123,13 +143,12 @@
 				</div>
 			</div> -->
 
-			<div class="student student-purple student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="summer">
+			<div class="student student-purple student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/azbellKelly/image0.png" alt="kelly">
-						<img src="dist/img/optamizedStudents/azbellKelly/image2.png" alt="kelly">
-						<img src="dist/img/optamizedStudents/azbellKelly/image3.png" alt="kelly">
-				
+						<img src="dist/img/optimized-students/azbellKelly/image0.png" alt="kelly" />
+						<img src="dist/img/optimized-students/azbellKelly/image2.png" alt="kelly" />
+						<img src="dist/img/optimized-students/azbellKelly/image3.png" alt="kelly" />
 					</figure>
 					<figcaption>
 						<h3>Kelly Azbell</h3>
@@ -150,14 +169,13 @@
 				</div>
 			</div>
 
-			<div class="student student-yellow student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="summer">
+			<div class="student student-yellow student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/bergLiam/1.png" alt="liam">
-						<img src="dist/img/optamizedStudents/bergLiam/2.png" alt="liam">
-						<img src="dist/img/optamizedStudents/bergLiam/3.png" alt="liam">
-						<img src="dist/img/optamizedStudents/bergLiam/4.png" alt="liam">
-						
+						<img src="dist/img/optimized-students/bergLiam/1.png" alt="liam" />
+						<img src="dist/img/optimized-students/bergLiam/2.png" alt="liam" />
+						<img src="dist/img/optimized-students/bergLiam/3.png" alt="liam" />
+						<img src="dist/img/optimized-students/bergLiam/4.png" alt="liam" />
 					</figure>
 					<figcaption>
 						<h3>Liam Berg</h3>
@@ -178,13 +196,12 @@
 				</div>
 			</div>
 
-			<div class="student student-green student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="summer">
+			<div class="student student-green student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/budorickKate/Budorick_K_01.png" alt="kate">
-						<img src="dist/img/optamizedStudents/budorickKate/Budorick_K_02.png" alt="kate">
-						<img src="dist/img/optamizedStudents/budorickKate/Budorick_K_03.png" alt="kate">
-						
+						<img src="dist/img/optimized-students/budorickKate/Budorick_K_01.png" alt="kate" />
+						<img src="dist/img/optimized-students/budorickKate/Budorick_K_02.png" alt="kate" />
+						<img src="dist/img/optimized-students/budorickKate/Budorick_K_03.png" alt="kate" />
 					</figure>
 					<figcaption>
 						<h3>Kate Budorick</h3>
@@ -204,11 +221,10 @@
 				</div>
 			</div>
 
-			<div class="student student-pink student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="summer">
+			<div class="student student-pink student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/cavanaughSabrina/sabrina-png-400x400.png" alt="sabrina">
-						
+						<img src="dist/img/optimized-students/cavanaughSabrina/sabrina-png-400x400.png" alt="sabrina" />
 					</figure>
 					<figcaption>
 						<h3>Sabrina Cavanaugh</h3>
@@ -228,16 +244,15 @@
 				</div>
 			</div>
 
-			<div class="student student-orange student-flipped student-flipped-mobile" data-program="design" data-cohort="summer">
+			<div class="student student-orange student-flipped student-flipped-mobile" data-program="design" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/chungAbigail/abigail_1.png" alt="abigail">
-						<img src="dist/img/optamizedStudents/chungAbigail/abigail_2.png" alt="abigail">
-						<img src="dist/img/optamizedStudents/chungAbigail/abigail_3.png" alt="abigail">
-						
+						<img src="dist/img/optimized-students/chungAbigail/abigail_1.png" alt="abigail" />
+						<img src="dist/img/optimized-students/chungAbigail/abigail_2.png" alt="abigail" />
+						<img src="dist/img/optimized-students/chungAbigail/abigail_3.png" alt="abigail" />
 					</figure>
 					<figcaption>
-						<h3>Abigail Chung </h3>
+						<h3>Abigail Chung</h3>
 						<h4>Designer</h4>
 						<h5>Recent Graduate</h5>
 						<h6>Looking for Work</h6>
@@ -254,25 +269,22 @@
 				</div>
 			</div>
 
-			<div class="student student-blue student-flipped student-flipped-mobile" data-program="design" data-cohort="fall">
+			<div class="student student-blue student-flipped student-flipped-mobile" data-program="design" data-cohort="not">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/condrickSean/SCPR1.png" alt="sean">
-						<img src="dist/img/optamizedStudents/condrickSean/SCPR2.png" alt="sean">
-						<img src="dist/img/optamizedStudents/condrickSean/SCPR3.png" alt="sean">
-						<img src="dist/img/optamizedStudents/condrickSean/SCPR4.png" alt="sean">
-						
-						
+						<img src="dist/img/optimized-students/condrickSean/SCPR1.png" alt="sean" />
+						<img src="dist/img/optimized-students/condrickSean/SCPR2.png" alt="sean" />
+						<img src="dist/img/optimized-students/condrickSean/SCPR3.png" alt="sean" />
+						<img src="dist/img/optimized-students/condrickSean/SCPR4.png" alt="sean" />
 					</figure>
 					<figcaption>
-						<h3>Sean Condrick </h3>
+						<h3>Sean Condrick</h3>
 						<h4>Designer</h4>
 						<h5>Portfolio in progress</h5>
 						<h6>Looking for mentoring and critique</h6>
 						<p>
-							<!-- does not have a portfolio link -->
-							<!-- <a href="#" target="_blank">View Portfolio</a> -->
-							<a href="#" target="_blank">Book a meeting</a>
+							<a href="https://seancondrick.com/" target="_blank">View Portfolio</a>
+							<a href="https://calendly.com/seancondrick/portfolio-review?month=2021-09" target="_blank">Book a meeting</a>
 						</p>
 					</figcaption>
 				</div>
@@ -283,16 +295,15 @@
 				</div>
 			</div>
 
-			<div class="student student-purple student-flipped student-flipped-mobile" data-program="design" data-cohort="fall">
+			<div class="student student-purple student-flipped student-flipped-mobile" data-program="design" data-cohort="not">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/cooterCayce/Frame 3.png" alt="cayce">
-						<img src="dist/img/optamizedStudents/cooterCayce/Frame 4.png" alt="cayce">
-						<img src="dist/img/optamizedStudents/cooterCayce/Frame 5.png" alt="cayce">
-						
+						<img src="dist/img/optimized-students/cooterCayce/Frame 3.png" alt="cayce" />
+						<img src="dist/img/optimized-students/cooterCayce/Frame 4.png" alt="cayce" />
+						<img src="dist/img/optimized-students/cooterCayce/Frame 5.png" alt="cayce" />
 					</figure>
 					<figcaption>
-						<h3>Cayce Cooter </h3>
+						<h3>Cayce Cooter</h3>
 						<h4>Designer</h4>
 						<h5>Portfolio in progress</h5>
 						<h6>Looking for mentoring and critique</h6>
@@ -310,23 +321,20 @@
 				</div>
 			</div>
 
-			<div class="student student-yellow student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="fall">
+			<div class="student student-yellow student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="not">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/cortezLanyor/Lanyor1.png" alt="lanyor">
-						<img src="dist/img/optamizedStudents/cortezLanyor/Lanyor2.png" alt="lanyor">
-						<img src="dist/img/optamizedStudents/cortezLanyor/Lanyor3.png" alt="lanyor">
-						<img src="dist/img/optamizedStudents/cortezLanyor/Lanyor4.png" alt="lanyor">
-
-						
+						<img src="dist/img/optimized-students/cortezLanyor/Lanyor1.png" alt="lanyor" />
+						<img src="dist/img/optimized-students/cortezLanyor/Lanyor2.png" alt="lanyor" />
+						<img src="dist/img/optimized-students/cortezLanyor/Lanyor3.png" alt="lanyor" />
+						<img src="dist/img/optimized-students/cortezLanyor/Lanyor4.png" alt="lanyor" />
 					</figure>
 					<figcaption>
-						<h3>Lanyor Cortez </h3>
+						<h3>Lanyor Cortez</h3>
 						<h4>Copywriter</h4>
 						<h5>Portfolio in progress</h5>
 						<h6>Looking for mentoring and critique</h6>
 						<p>
-							
 							<a href="https://www.lanyorcortez.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -339,22 +347,21 @@
 				</div>
 			</div>
 
-			<div class="student student-green student-flipped student-flipped-mobile" data-program="design" data-cohort="summer">
+			<div class="student student-green student-flipped student-flipped-mobile" data-program="design" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/drbalSammi/SDrbal-portfolioreview-1.png" alt="sammi">
-						<img src="dist/img/optamizedStudents/drbalSammi/SDrbal-portfolioreview-2.png" alt="sammi">
-						<img src="dist/img/optamizedStudents/drbalSammi/SDrbal-portfolioreview-3.png" alt="sammi">
-						<img src="dist/img/optamizedStudents/drbalSammi/SDrbal-portfolioreview-4.png" alt="sammi">
-						<img src="dist/img/optamizedStudents/drbalSammi/SDrbal-portfolioreview-5.png" alt="sammi">	
+						<img src="dist/img/optimized-students/drbalSammi/SDrbal-portfolioreview-1.png" alt="sammi" />
+						<img src="dist/img/optimized-students/drbalSammi/SDrbal-portfolioreview-2.png" alt="sammi" />
+						<img src="dist/img/optimized-students/drbalSammi/SDrbal-portfolioreview-3.png" alt="sammi" />
+						<img src="dist/img/optimized-students/drbalSammi/SDrbal-portfolioreview-4.png" alt="sammi" />
+						<img src="dist/img/optimized-students/drbalSammi/SDrbal-portfolioreview-5.png" alt="sammi" />
 					</figure>
 					<figcaption>
-						<h3>Sammi Drbal </h3>
+						<h3>Sammi Drbal</h3>
 						<h4>Designer</h4>
 						<h5>Recent Graduate</h5>
 						<h6>Looking for Work</h6>
 						<p>
-							
 							<a href="http://drbal-like-gerbil.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -367,22 +374,21 @@
 				</div>
 			</div>
 
-			<div class="student student-pink student-flipped student-flipped-mobile" data-program="design" data-cohort="fall">
+			<div class="student student-pink student-flipped student-flipped-mobile" data-program="design" data-cohort="not">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/faktorowSam/SamPR1.PNG" alt="sam">
-						<img src="dist/img/optamizedStudents/faktorowSam/SamPR2.PNG" alt="sam">
-						<img src="dist/img/optamizedStudents/faktorowSam/SamPR3.PNG" alt="sam">
-						<img src="dist/img/optamizedStudents/faktorowSam/SamPR4.PNG" alt="sam">
-						<img src="dist/img/optamizedStudents/faktorowSam/SamPR5.PNG" alt="sam">
+						<img src="dist/img/optimized-students/faktorowSam/SamPR1.PNG" alt="sam" />
+						<img src="dist/img/optimized-students/faktorowSam/SamPR2.PNG" alt="sam" />
+						<img src="dist/img/optimized-students/faktorowSam/SamPR3.PNG" alt="sam" />
+						<img src="dist/img/optimized-students/faktorowSam/SamPR4.PNG" alt="sam" />
+						<img src="dist/img/optimized-students/faktorowSam/SamPR5.PNG" alt="sam" />
 					</figure>
 					<figcaption>
-						<h3>Sam Faktorow </h3>
+						<h3>Sam Faktorow</h3>
 						<h4>Designer</h4>
 						<h5>Portfolio in progress</h5>
 						<h6>Looking for mentoring and critique</h6>
 						<p>
-							
 							<a href="#" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -395,18 +401,17 @@
 				</div>
 			</div>
 
-			<div class="student student-orange student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="summer">
+			<div class="student student-orange student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/friederColeEthan/ColeFrieder.png" alt="cole">
+						<img src="dist/img/optimized-students/friederColeEthan/ColeFrieder.png" alt="cole" />
 					</figure>
 					<figcaption>
-						<h3>Cole Frieder </h3>
+						<h3>Cole Frieder</h3>
 						<h4>Art Director</h4>
 						<h5>Recent Graduate</h5>
 						<h6>Looking for Work</h6>
 						<p>
-							
 							<a href="http://www.colefrieder.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -419,18 +424,17 @@
 				</div>
 			</div>
 
-			<div class="student student-blue student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="summer">
+			<div class="student student-blue student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/fulmoreJoe/JoeFulmore.png" alt="joe">
+						<img src="dist/img/optimized-students/fulmoreJoe/JoeFulmore.png" alt="joe" />
 					</figure>
 					<figcaption>
-						<h3>Joe Fulmore </h3>
+						<h3>Joe Fulmore</h3>
 						<h4>Copywriter</h4>
 						<h5>Recent Graduate</h5>
 						<h6>Looking for Work</h6>
 						<p>
-							
 							<a href="https://joemama.work/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -442,22 +446,21 @@
 					<div><img src="dist/img/BlackStar.png" /></div>
 				</div>
 			</div>
-			<div class="student student-purple student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="summer">
+			<div class="student student-purple student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/ghaliLena/PortoflioReview-1.png" alt="lena">
-						<img src="dist/img/optamizedStudents/ghaliLena/PortoflioReview-2.png" alt="lena">
-						<img src="dist/img/optamizedStudents/ghaliLena/PortoflioReview-3.png" alt="lena">
-						<img src="dist/img/optamizedStudents/ghaliLena/PortoflioReview-4.png" alt="lena">
-						<img src="dist/img/optamizedStudents/ghaliLena/PortoflioReview-5.png" alt="lena">
+						<img src="dist/img/optimized-students/ghaliLena/PortoflioReview-1.png" alt="lena" />
+						<img src="dist/img/optimized-students/ghaliLena/PortoflioReview-2.png" alt="lena" />
+						<img src="dist/img/optimized-students/ghaliLena/PortoflioReview-3.png" alt="lena" />
+						<img src="dist/img/optimized-students/ghaliLena/PortoflioReview-4.png" alt="lena" />
+						<img src="dist/img/optimized-students/ghaliLena/PortoflioReview-5.png" alt="lena" />
 					</figure>
 					<figcaption>
-						<h3>Lena Ghali </h3>
+						<h3>Lena Ghali</h3>
 						<h4>Art Director</h4>
 						<h5>Recent Graduate</h5>
 						<h6>Looking for Work</h6>
 						<p>
-							
 							<a href="https://www.lenaghali.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -470,22 +473,21 @@
 				</div>
 			</div>
 
-			<div class="student student-yellow student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="fall">
+			<div class="student student-yellow student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="not">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/gravelineClaire/Photo1.png" alt="claire">
-						<img src="dist/img/optamizedStudents/gravelineClaire/Photo2.png" alt="claire">
-						<img src="dist/img/optamizedStudents/gravelineClaire/Photo3.png" alt="claire">
-						<img src="dist/img/optamizedStudents/gravelineClaire/Photo4.png" alt="claire">
-						<img src="dist/img/optamizedStudents/gravelineClaire/Photo5.png" alt="claire">
+						<img src="dist/img/optimized-students/gravelineClaire/Photo1.png" alt="claire" />
+						<img src="dist/img/optimized-students/gravelineClaire/Photo2.png" alt="claire" />
+						<img src="dist/img/optimized-students/gravelineClaire/Photo3.png" alt="claire" />
+						<img src="dist/img/optimized-students/gravelineClaire/Photo4.png" alt="claire" />
+						<img src="dist/img/optimized-students/gravelineClaire/Photo5.png" alt="claire" />
 					</figure>
 					<figcaption>
-						<h3>Claire Graveline </h3>
+						<h3>Claire Graveline</h3>
 						<h4>Art Director</h4>
 						<h5>Portfolio in progress</h5>
 						<h6>Looking for mentoring and critique</h6>
 						<p>
-							
 							<a href="http://www.clairegraveline.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -498,21 +500,19 @@
 				</div>
 			</div>
 
-			<div class="student student-green student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="fall">
+			<div class="student student-green student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="not">
 				<div class="student-content">
 					<figure>
-						
-						<img src="dist/img/optamizedStudents/guzmanItzel/Itzel 2.png" alt="itzel">
-						<img src="dist/img/optamizedStudents/guzmanItzel/Itzel 3.png" alt="itzel">
-						<img src="dist/img/optamizedStudents/guzmanItzel/Itzel 4.png" alt="itzel">
+						<img src="dist/img/optimized-students/guzmanItzel/Itzel 2.png" alt="itzel" />
+						<img src="dist/img/optimized-students/guzmanItzel/Itzel 3.png" alt="itzel" />
+						<img src="dist/img/optimized-students/guzmanItzel/Itzel 4.png" alt="itzel" />
 					</figure>
 					<figcaption>
-						<h3>Itzel Guzman </h3>
+						<h3>Itzel Guzman</h3>
 						<h4>Copywriter</h4>
-						<h5>Portfolio in progress</h5>
+						<h5>Hired, portfolio in progress</h5>
 						<h6>Looking for mentoring and critique</h6>
 						<p>
-							
 							<a href="http://itzelireri.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -525,23 +525,22 @@
 				</div>
 			</div>
 
-			<div class="student student-pink student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="fall">
+			<div class="student student-pink student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="not">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/martinPatrick/1.png" alt="patrick">
-						<img src="dist/img/optamizedStudents/martinPatrick/2.png" alt="patrick">
-						<img src="dist/img/optamizedStudents/martinPatrick/3.png" alt="patrick">
-						<img src="dist/img/optamizedStudents/martinPatrick/4.png" alt="patrick">
-						<img src="dist/img/optamizedStudents/martinPatrick/5.png" alt="patrick">
+						<img src="dist/img/optimized-students/martinPatrick/1.png" alt="patrick" />
+						<img src="dist/img/optimized-students/martinPatrick/2.png" alt="patrick" />
+						<img src="dist/img/optimized-students/martinPatrick/3.png" alt="patrick" />
+						<img src="dist/img/optimized-students/martinPatrick/4.png" alt="patrick" />
+						<img src="dist/img/optimized-students/martinPatrick/5.png" alt="patrick" />
 					</figure>
 					<figcaption>
-						<h3>Patrick Martin </h3>
+						<h3>Patrick Martin</h3>
 						<h4>Art Director</h4>
 						<h5>Portfolio in progress</h5>
 						<h6>Looking for mentoring and critique</h6>
-					
+
 						<p>
-							
 							<a href="https://www.worstartdirector.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -554,20 +553,19 @@
 				</div>
 			</div>
 
-			<div class="student student-orange student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="fall">
+			<div class="student student-orange student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="not">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/montesGeena/unnamed-1.png" alt="geena">
-						<img src="dist/img/optamizedStudents/montesGeena/unnamed.png" alt="geena">
+						<img src="dist/img/optimized-students/montesGeena/unnamed-1.png" alt="geena" />
+						<img src="dist/img/optimized-students/montesGeena/unnamed.png" alt="geena" />
 					</figure>
 					<figcaption>
-						<h3>Geena Montes </h3>
+						<h3>Geena Montes</h3>
 						<h4>Art Director</h4>
 						<h5>Portfolio in progress</h5>
 						<h6>Looking for mentoring and critique</h6>
-					
+
 						<p>
-							
 							<a href="https://www.strokeofgeeni.us/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -580,22 +578,21 @@
 				</div>
 			</div>
 
-			<div class="student student-blue student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="summer">
+			<div class="student student-blue student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/newsomeHannah/Hannah Newsome 1.png" alt="hannah">
-						<img src="dist/img/optamizedStudents/newsomeHannah/Hannah Newsome 2.png" alt="hannah">
-						<img src="dist/img/optamizedStudents/newsomeHannah/Hannah Newsome 4.png" alt="hannah">
-						<img src="dist/img/optamizedStudents/newsomeHannah/Hannah Newsome 3. png.png" alt="hannah">
+						<img src="dist/img/optimized-students/newsomeHannah/Hannah Newsome 1.png" alt="hannah" />
+						<img src="dist/img/optimized-students/newsomeHannah/Hannah Newsome 2.png" alt="hannah" />
+						<img src="dist/img/optimized-students/newsomeHannah/Hannah Newsome 4.png" alt="hannah" />
+						<img src="dist/img/optimized-students/newsomeHannah/Hannah Newsome 3. png.png" alt="hannah" />
 					</figure>
 					<figcaption>
-						<h3>Hannah Newsome </h3>
+						<h3>Hannah Newsome</h3>
 						<h4>Art Director</h4>
 						<h5>Recent Graduate</h5>
 						<h6>Looking for Work</h6>
-					
+
 						<p>
-							
 							<a href="https://www.hannahlnewsome.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -608,21 +605,20 @@
 				</div>
 			</div>
 
-			<div class="student student-purple student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="summer">
+			<div class="student student-purple student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/rozierRand/Rand arms crossed.png" alt="rand">
-						<img src="dist/img/optamizedStudents/rozierRand/rand holding dog.png" alt="rand">
-						<img src="dist/img/optamizedStudents/rozierRand/rand reading.png" alt="rand">
+						<img src="dist/img/optimized-students/rozierRand/Rand arms crossed.png" alt="rand" />
+						<img src="dist/img/optimized-students/rozierRand/rand holding dog.png" alt="rand" />
+						<img src="dist/img/optimized-students/rozierRand/rand reading.png" alt="rand" />
 					</figure>
 					<figcaption>
-						<h3>Rand Rozier </h3>
+						<h3>Rand Rozier</h3>
 						<h4>Copywriter</h4>
 						<h5>Recent Graduate</h5>
 						<h6>Looking for Work</h6>
-					
+
 						<p>
-							
 							<a href="https://randrozier.squarespace.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -635,23 +631,22 @@
 				</div>
 			</div>
 
-			<div class="student student-yellow student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="summer">
+			<div class="student student-yellow student-flipped student-flipped-mobile" data-program="artdirection" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/simonMichael/michael_1.png" alt="michael">
-						<img src="dist/img/optamizedStudents/simonMichael/michael_2.png" alt="michael">
-						<img src="dist/img/optamizedStudents/simonMichael/michael_3.png" alt="michael">
-						<img src="dist/img/optamizedStudents/simonMichael/michael_4.png" alt="michael">
-						<img src="dist/img/optamizedStudents/simonMichael/michael_5.png" alt="michael">
+						<img src="dist/img/optimized-students/simonMichael/michael_1.png" alt="michael" />
+						<img src="dist/img/optimized-students/simonMichael/michael_2.png" alt="michael" />
+						<img src="dist/img/optimized-students/simonMichael/michael_3.png" alt="michael" />
+						<img src="dist/img/optimized-students/simonMichael/michael_4.png" alt="michael" />
+						<img src="dist/img/optimized-students/simonMichael/michael_5.png" alt="michael" />
 					</figure>
 					<figcaption>
-						<h3>Michael Simon </h3>
+						<h3>Michael Simon</h3>
 						<h4>Art Director</h4>
 						<h5>Recent Graduate</h5>
 						<h6>Looking for Work</h6>
-					
+
 						<p>
-							
 							<a href="http://sichaelmimon.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -664,19 +659,18 @@
 				</div>
 			</div>
 
-			<div class="student student-green student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="summer">
+			<div class="student student-green student-flipped student-flipped-mobile" data-program="copywriting" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/springerMegan/PortfolioReviewpic.png" alt="megan">
+						<img src="dist/img/optimized-students/springerMegan/PortfolioReviewpic.png" alt="megan" />
 					</figure>
 					<figcaption>
-						<h3>Megan Springer </h3>
+						<h3>Megan Springer</h3>
 						<h4>Copywriter</h4>
 						<h5>Recent Graduate</h5>
 						<h6>Looking for Work</h6>
-					
+
 						<p>
-							
 							<a href="https://www.meganspringer.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -689,23 +683,22 @@
 				</div>
 			</div>
 
-			<div class="student student-pink student-flipped student-flipped-mobile" data-program="design" data-cohort="summer">
+			<div class="student student-pink student-flipped student-flipped-mobile" data-program="design" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/ullmanShelby/Shelby Ullman 1.png" alt="shelby">
-						<img src="dist/img/optamizedStudents/ullmanShelby/Shelby Ullman 2.png" alt="shelby">
-						<img src="dist/img/optamizedStudents/ullmanShelby/Shelby Ullman 3.png" alt="shelby">
-						<img src="dist/img/optamizedStudents/ullmanShelby/Shelby Ullman 4.png" alt="shelby">
-						<img src="dist/img/optamizedStudents/ullmanShelby/Shelby Ullman 5.png" alt="shelby">
+						<img src="dist/img/optimized-students/ullmanShelby/Shelby Ullman 1.png" alt="shelby" />
+						<img src="dist/img/optimized-students/ullmanShelby/Shelby Ullman 2.png" alt="shelby" />
+						<img src="dist/img/optimized-students/ullmanShelby/Shelby Ullman 3.png" alt="shelby" />
+						<img src="dist/img/optimized-students/ullmanShelby/Shelby Ullman 4.png" alt="shelby" />
+						<img src="dist/img/optimized-students/ullmanShelby/Shelby Ullman 5.png" alt="shelby" />
 					</figure>
 					<figcaption>
-						<h3>Shelby Ullman </h3>
+						<h3>Shelby Ullman</h3>
 						<h4>Designer</h4>
 						<h5>Recent Graduate</h5>
 						<h6>Looking for Work</h6>
-					
+
 						<p>
-							
 							<a href="https://www.skullmandesigns.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -718,23 +711,21 @@
 				</div>
 			</div>
 
-			<div class="student student-orange student-flipped student-flipped-mobile" data-program="design" data-cohort="summer">
+			<div class="student student-orange student-flipped student-flipped-mobile" data-program="design" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/waltonLauren/square1.png" alt="lauren">
-						<img src="dist/img/optamizedStudents/waltonLauren/square2.png" alt="lauren">
-						<img src="dist/img/optamizedStudents/waltonLauren/square3.png" alt="lauren">
-						<img src="dist/img/optamizedStudents/waltonLauren/square4.png" alt="lauren">
-						
+						<img src="dist/img/optimized-students/waltonLauren/square1.png" alt="lauren" />
+						<img src="dist/img/optimized-students/waltonLauren/square2.png" alt="lauren" />
+						<img src="dist/img/optimized-students/waltonLauren/square3.png" alt="lauren" />
+						<img src="dist/img/optimized-students/waltonLauren/square4.png" alt="lauren" />
 					</figure>
 					<figcaption>
-						<h3>Lauren Walton </h3>
+						<h3>Lauren Walton</h3>
 						<h4>Designer</h4>
 						<h5>Recent Graduate</h5>
 						<h6>Looking for Work</h6>
-					
+
 						<p>
-							
 							<a href="http://laurenjwalton.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -747,19 +738,18 @@
 				</div>
 			</div>
 
-			<div class="student student-blue student-flipped student-flipped-mobile" data-program="design" data-cohort="summer">
+			<div class="student student-blue student-flipped student-flipped-mobile" data-program="design" data-cohort="grad">
 				<div class="student-content">
 					<figure>
-						<img src="dist/img/optamizedStudents/witteLindsay/Witte,Lindsay - DS.png" alt="lindsay">
+						<img src="dist/img/optimized-students/witteLindsay/Witte,Lindsay - DS.png" alt="lindsay" />
 					</figure>
 					<figcaption>
-						<h3>Lindsay Witte </h3>
+						<h3>Lindsay Witte</h3>
 						<h4>Designer</h4>
 						<h5>Recent Graduate</h5>
 						<h6>Looking for Work</h6>
-					
+
 						<p>
-							
 							<a href="https://www.lindsaywitte.com/" target="_blank">View Portfolio</a>
 							<a href="#" target="_blank">Book a meeting</a>
 						</p>
@@ -771,32 +761,20 @@
 					<div><img src="dist/img/BlackStar.png" /></div>
 				</div>
 			</div>
+		</div>
 
-			
-
-			
-
-			<!-- <div class="nav nav-dropdown cohort-picker cohort-picker-bottom">
-				Quarter
-				<ul>
-					<li class="active" data-cohort="all">All</li>
-					<li data-cohort="summer">Summer 2021<small>(medium well)</small></li>
-					<li data-cohort="fall">Fall 2021 <small>(rare)</small></li>
-				</ul>
-			</div>
-			<div class="nav nav-dropdown program-picker program-picker-bottom">
-				Program
-				<ul>
-					<li class="active" data-program="all">All</li>
-					<li data-program="copywriting">Copywriting</li>
-					<li data-program="artdirection">Art Direction</li>
-					<li data-program="design">Design</li>
-					<li data-program="photography">Photography & Content Creation</li>
-					<li data-program="creativetechnology">Creative Technology</li>
-				</ul>
-			</div>
-		</div> -->
-
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
+			integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js"
+			integrity="sha512-1OG9UO4krPizjtz/c9iDbjCqtXznBYdJeD4ccPaYfJHzC6F1qoQ3P1bgQ3J8lgCoK5qGVCqsY4+/RKjLDzITVQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
 		<script src="dist/js/main.js"></script>
 	</body>
 </html>

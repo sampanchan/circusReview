@@ -11,7 +11,7 @@
 
 	width: 100%;
 	display: grid;
-	grid-template-rows: repeat(120, variables.$column);
+	grid-template-rows: repeat(110, variables.$column);
 	grid-template-columns: repeat(24, variables.$column);
 
 	@include mixins.mobile {
@@ -202,6 +202,14 @@
 			grid-column-start: 16;
 			grid-row-end: span 6;
 			grid-column-end: span 6;
+		}
+	}
+
+	.spacer-top-of-students {
+		grid-column: 13 / span 12;
+		grid-row: 16 / span 4;
+		@include mixins.mobile {
+			grid-row-end: span 7;
 		}
 	}
 

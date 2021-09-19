@@ -19,6 +19,7 @@ var allStudents = document.querySelectorAll('.student');
 var allStudentSpacers = document.querySelectorAll('.student-spacer');
 var cohortPickerItems = document.querySelectorAll('.cohort-picker li');
 var programPickerItems = document.querySelectorAll('.program-picker li');
+var featuredStudents = document.querySelectorAll('.featured-person');
 cohortPickerItems.forEach(function (item) {
   item.addEventListener('click', function () {
     if (pickedCohort === this.dataset.cohort) return;
@@ -33,6 +34,36 @@ cohortPickerItems.forEach(function (item) {
     });
     console.log('pickedCohort', pickedCohort);
     showHideStudents();
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: 15 / 24 * window.innerWidth,
+      delay: 0.5,
+      ease: 'power1.inOut'
+    });
+    newCohortItems.forEach(function (item) {
+      item.classList.add('clicked');
+      setTimeout(function () {
+        return item.classList.remove('clicked');
+      }, 100);
+      setTimeout(function () {
+        return item.classList.add('clicked');
+      }, 200);
+      setTimeout(function () {
+        return item.classList.remove('clicked');
+      }, 300);
+      setTimeout(function () {
+        return item.classList.add('clicked');
+      }, 400);
+      setTimeout(function () {
+        return item.classList.remove('clicked');
+      }, 500);
+      setTimeout(function () {
+        return item.classList.add('clicked');
+      }, 600);
+      setTimeout(function () {
+        return item.classList.remove('clicked');
+      }, 700);
+    });
   });
 });
 programPickerItems.forEach(function (item) {
@@ -49,6 +80,36 @@ programPickerItems.forEach(function (item) {
     });
     console.log('pickedProgram', pickedProgram);
     showHideStudents();
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: 15 / 24 * window.innerWidth,
+      delay: 0.5,
+      ease: 'power1.inOut'
+    });
+    newProgramItems.forEach(function (item) {
+      item.classList.add('clicked');
+      setTimeout(function () {
+        return item.classList.remove('clicked');
+      }, 100);
+      setTimeout(function () {
+        return item.classList.add('clicked');
+      }, 200);
+      setTimeout(function () {
+        return item.classList.remove('clicked');
+      }, 300);
+      setTimeout(function () {
+        return item.classList.add('clicked');
+      }, 400);
+      setTimeout(function () {
+        return item.classList.remove('clicked');
+      }, 500);
+      setTimeout(function () {
+        return item.classList.add('clicked');
+      }, 600);
+      setTimeout(function () {
+        return item.classList.remove('clicked');
+      }, 700);
+    });
   });
 });
 
@@ -96,14 +157,11 @@ allStudents.forEach(function (student) {
       currentPhotoIndex = 0;
     }
 
-    console.log('hit');
     photos.forEach(function (photo, i) {
-      console.log('hit', i);
       photos[i].classList.add('hide');
       photos[i].classList.remove('show');
 
       if (i === currentPhotoIndex) {
-        console.log('match', i);
         photos[i].classList.remove('hide');
         photos[i].classList.add('show');
       }
@@ -121,6 +179,65 @@ allStudents.forEach(function (student) {
       photos[i].classList.remove('show');
       photos[i].classList.remove('hide');
     });
+  });
+});
+featuredStudents.forEach(function (student, i) {
+  var images = student.querySelectorAll('img');
+  var tl = gsap.timeline({
+    repeat: -1,
+    repeatDelay: 10,
+    delay: i * 0.75 + 2
+  });
+  tl.to(images[0], {
+    x: '-150%',
+    duration: 1,
+    ease: 'power1.easeInOut'
+  }, 'part1');
+  tl.to(images[1], {
+    x: '150%',
+    duration: 0
+  }, 'part1+=0.75');
+  tl.to(images[1], {
+    x: '0%',
+    duration: 1,
+    ease: 'power1.easeInOut'
+  }, 'part1+=0.4');
+  tl.to({}, {
+    duration: 5
+  });
+  tl.to(images[1], {
+    x: '-150%',
+    duration: 1,
+    ease: 'power1.easeInOut'
+  }, 'part2');
+  tl.to(images[2], {
+    x: '150%',
+    duration: 0
+  }, 'part2+=0.4');
+  tl.to(images[2], {
+    x: '0%',
+    duration: 1,
+    ease: 'power1.easeInOut'
+  }, 'part2+=0.4');
+  tl.to({}, {
+    duration: 5
+  });
+  tl.to(images[2], {
+    x: '-150%',
+    duration: 1,
+    ease: 'power1.easeInOut'
+  }, 'part3');
+  tl.to(images[0], {
+    x: '150%',
+    duration: 0
+  }, 'part3+=0.4');
+  tl.to(images[0], {
+    x: '0%',
+    duration: 1,
+    ease: 'power1.easeInOut'
+  }, 'part3+=0.4');
+  tl.to({}, {
+    duration: 5
   });
 });
 //# sourceMappingURL=main.js.map
