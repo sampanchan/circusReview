@@ -11,12 +11,12 @@
 
 	width: 100%;
 	display: grid;
-	grid-template-rows: repeat(110, variables.$column);
 	grid-template-columns: repeat(24, variables.$column);
+	grid-template-rows: repeat(15, variables.$column);
 
 	@include mixins.mobile {
-		grid-template-rows: repeat(120, variables.$column-mobile);
 		grid-template-columns: repeat(12, variables.$column-mobile);
+		grid-template-rows: repeat(120, variables.$column-mobile);
 	}
 
 	> * {
@@ -204,20 +204,22 @@
 			grid-column-end: span 6;
 		}
 	}
-
-	.spacer-top-of-students {
-		grid-column: 13 / span 12;
-		grid-row: 16 / span 4;
-		@include mixins.mobile {
-			grid-row-end: span 7;
-		}
-	}
-
-	.student {
-		grid-column-end: span 12;
-		grid-row-end: span 8;
-		@include mixins.mobile {
-			grid-row-end: span 7;
-		}
-	}
 }
+
+// .student-container {
+// 	.spacer-top-of-students {
+// 		grid-column: 13 / span 12;
+// 		grid-row: 16 / span 4;
+// 		@include mixins.mobile {
+// 			grid-row-end: span 7;
+// 		}
+// 	}
+
+// 	.student {
+// 		grid-column-end: span 12;
+// 		grid-row-end: span 8;
+// 		@include mixins.mobile {
+// 			grid-row-end: span 7;
+// 		}
+// 	}
+// }
