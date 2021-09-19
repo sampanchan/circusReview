@@ -36,6 +36,11 @@ body {
 	}
 }
 
+.faq-button {
+	color: black;
+	text-decoration: none;
+}
+
 // Nav Dropdown: quarter or program in the top nav
 .nav-dropdown {
 	position: relative;
@@ -452,6 +457,40 @@ body {
 				// animation-direction: alternate;
 				animation-timing-function: linear;
 				animation-iteration-count: infinite;
+			}
+		}
+	}
+}
+
+.faq {
+	.faq-content {
+		width: percentage(16/24);
+		margin: 0 auto;
+		padding: 2em 1em;
+
+		h2 {
+			font-size: 4em;
+			letter-spacing: 0.2em;
+		}
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+			li {
+				margin: 1.5em 0 2em;
+				p {
+					margin: 0.5em 0;
+					line-height: 1.4em;
+					&.q {
+						font-size: 1.25em;
+						font-style: italic;
+					}
+					&.a {
+					}
+					a {
+						color: black;
+					}
+				}
 			}
 		}
 	}

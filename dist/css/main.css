@@ -536,6 +536,9 @@ table {
 	grid-column-end: span 12;
 	grid-row-end: span 4;
 }
+.the-mega-grid .faq {
+	grid-column-end: span 25;
+}
 
 body {
 	background: #EBE0CC;
@@ -570,6 +573,11 @@ body {
 	.nav {
 		font-size: 4vw;
 	}
+}
+
+.faq-button {
+	color: black;
+	text-decoration: none;
 }
 
 .nav-dropdown {
@@ -939,6 +947,34 @@ body {
 	        animation-timing-function: linear;
 	-webkit-animation-iteration-count: infinite;
 	        animation-iteration-count: infinite;
+}
+
+.faq .faq-content {
+	width: 66.6666666667%;
+	margin: 0 auto;
+	padding: 2em 1em;
+}
+.faq .faq-content h2 {
+	font-size: 4em;
+	letter-spacing: 0.2em;
+}
+.faq .faq-content ul {
+	list-style-type: none;
+	margin: 0;
+}
+.faq .faq-content ul li {
+	margin: 1.5em 0 2em;
+}
+.faq .faq-content ul li p {
+	margin: 0.5em 0;
+	line-height: 1.4em;
+}
+.faq .faq-content ul li p.q {
+	font-size: 1.25em;
+	font-style: italic;
+}
+.faq .faq-content ul li p a {
+	color: black;
 }
 
 /* 

@@ -146,3 +146,12 @@ document.querySelector('[href="#top"]').addEventListener('click', (e) => {
 	e.preventDefault();
 	gsap.to(window, { duration: 1, scrollTo: 0, delay: 0.15, ease: 'power1.inOut' });
 });
+
+document.querySelector('[href="#faq"]').addEventListener('click', (e) => {
+	e.preventDefault();
+	gsap.to(window, { duration: 1, scrollTo: '#faq', delay: 0.15, ease: 'power1.inOut' });
+});
+
+document.querySelectorAll("[href='#']").forEach((badLink) => {
+	console.warn('bad link', badLink);
+});

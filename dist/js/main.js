@@ -249,4 +249,16 @@ document.querySelector('[href="#top"]').addEventListener('click', function (e) {
     ease: 'power1.inOut'
   });
 });
+document.querySelector('[href="#faq"]').addEventListener('click', function (e) {
+  e.preventDefault();
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: '#faq',
+    delay: 0.15,
+    ease: 'power1.inOut'
+  });
+});
+document.querySelectorAll("[href='#']").forEach(function (badLink) {
+  console.warn('bad link', badLink);
+});
 //# sourceMappingURL=main.js.map
