@@ -539,6 +539,11 @@ table {
 .the-mega-grid .faq {
 	grid-column-end: span 25;
 }
+@media screen and (max-width: 576px) {
+	.the-mega-grid .faq {
+		grid-column-end: span 12;
+	}
+}
 
 body {
 	background: #EBE0CC;
@@ -610,6 +615,11 @@ body {
 	color: #202020;
 	text-decoration: none;
 	cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+	.nav-dropdown ul li {
+		padding: 3vw 1vw;
+	}
 }
 .nav-dropdown ul li:last-child {
 	border-bottom-width: 1px;
@@ -884,7 +894,7 @@ body {
 .student .student-content figcaption p a {
 	display: inline-block;
 	font-size: 0.6em;
-	padding: 0.68em 0.9em 0.52em;
+	padding: 0.65em 0.9em;
 	margin-top: 0.5em;
 	border: 1px solid #202020;
 	border-radius: 100px;
@@ -953,6 +963,11 @@ body {
 	width: 66.6666666667%;
 	margin: 0 auto;
 	padding: 2em 1em;
+}
+@media screen and (max-width: 576px) {
+	.faq .faq-content {
+		width: 91.6666666667%;
+	}
 }
 .faq .faq-content h2 {
 	font-size: 4em;

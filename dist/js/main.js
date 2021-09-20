@@ -33,6 +33,10 @@ cohortPickerItems.forEach(function (item) {
       return item.classList.add('active');
     });
     console.log('pickedCohort', pickedCohort);
+    console.log('analytics event', 'cohort_picked', pickedCohort);
+    gtag('event', 'cohort_picked', {
+      cohort: pickedCohort
+    });
     showHideStudents();
     gsap.to(window, {
       duration: 1,
@@ -79,6 +83,10 @@ programPickerItems.forEach(function (item) {
       return item.classList.add('active');
     });
     console.log('pickedProgram', pickedProgram);
+    console.log('analytics event', 'program_picked', pickedProgram);
+    gtag('event', 'program_picked', {
+      cohort: pickedProgram
+    });
     showHideStudents();
     gsap.to(window, {
       duration: 1,
@@ -260,5 +268,19 @@ document.querySelector('[href="#faq"]').addEventListener('click', function (e) {
 });
 document.querySelectorAll("[href='#']").forEach(function (badLink) {
   console.warn('bad link', badLink);
+});
+document.querySelectorAll('.student').forEach(function (student) {
+  var studentName = student.querySelector('h3').innerText;
+  console.log(studentName);
+  student.querySelectorAll('a').forEach(function (button) {
+    // console.log('button');
+    button.addEventListener('click', function () {
+      console.log('analytics event', 'student_link_clicked', studentName, button.href);
+      gtag('event', 'student_link_clicked', {
+        student: studentName,
+        link: button.href
+      });
+    });
+  });
 });
 //# sourceMappingURL=main.js.map

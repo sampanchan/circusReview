@@ -16,6 +16,11 @@ cohortPickerItems.forEach((item) => {
 		newCohortItems.forEach((item) => item.classList.add('active'));
 		console.log('pickedCohort', pickedCohort);
 
+		console.log('analytics event', 'cohort_picked', pickedCohort);
+		gtag('event', 'cohort_picked', {
+			cohort: pickedCohort,
+		});
+
 		showHideStudents();
 
 		gsap.to(window, { duration: 1, scrollTo: (15 / 24) * window.innerWidth, delay: 0.5, ease: 'power1.inOut' });
@@ -40,6 +45,11 @@ programPickerItems.forEach((item) => {
 		let newProgramItems = document.querySelectorAll(`.program-picker li[data-program=${pickedProgram}]`);
 		newProgramItems.forEach((item) => item.classList.add('active'));
 		console.log('pickedProgram', pickedProgram);
+
+		console.log('analytics event', 'program_picked', pickedProgram);
+		gtag('event', 'program_picked', {
+			cohort: pickedProgram,
+		});
 
 		showHideStudents();
 
@@ -154,4 +164,19 @@ document.querySelector('[href="#faq"]').addEventListener('click', (e) => {
 
 document.querySelectorAll("[href='#']").forEach((badLink) => {
 	console.warn('bad link', badLink);
+});
+
+document.querySelectorAll('.student').forEach((student) => {
+	let studentName = student.querySelector('h3').innerText;
+	console.log(studentName);
+	student.querySelectorAll('a').forEach((button) => {
+		// console.log('button');
+		button.addEventListener('click', () => {
+			console.log('analytics event', 'student_link_clicked', studentName, button.href);
+			gtag('event', 'student_link_clicked', {
+				student: studentName,
+				link: button.href,
+			});
+		});
+	});
 });

@@ -228,5 +228,8 @@
 
 	.faq {
 		grid-column-end: span 25;
+		@include mixins.mobile {
+			grid-column-end: span 12;
+		}
 	}
 }

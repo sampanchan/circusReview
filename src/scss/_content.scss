@@ -75,6 +75,10 @@ body {
 			text-decoration: none;
 			cursor: pointer;
 
+			@include mixins.mobile {
+				padding: 3vw 1vw;
+			}
+
 			&:last-child {
 				border-bottom-width: 1px;
 			}
@@ -387,7 +391,7 @@ body {
 				a {
 					display: inline-block;
 					font-size: 0.6em;
-					padding: 0.68em 0.9em 0.52em;
+					padding: 0.65em 0.9em;
 					margin-top: 0.5em;
 					border: 1px solid variables.$black;
 					border-radius: 100px;
@@ -465,6 +469,9 @@ body {
 .faq {
 	.faq-content {
 		width: percentage(16/24);
+		@include mixins.mobile {
+			width: percentage(22/24);
+		}
 		margin: 0 auto;
 		padding: 2em 1em;
 
