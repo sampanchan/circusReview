@@ -186,18 +186,24 @@ allStudents.forEach(function (student) {
     });
   };
 
-  student.querySelector('.student-content').addEventListener('mouseenter', function () {
+  var over = function over() {
     changeImage();
     intervalID = setInterval(changeImage, 500);
-  });
-  student.querySelector('.student-content').addEventListener('mouseleave', function () {
+  };
+
+  var out = function out() {
     clearInterval(intervalID);
     currentPhotoIndex = 0;
     photos.forEach(function (photo, i) {
       photos[i].classList.remove('show');
       photos[i].classList.remove('hide');
     });
-  });
+  };
+
+  student.querySelector('.student-content').addEventListener('mouseover', over);
+  student.querySelector('.student-content').addEventListener('touchstart', over);
+  student.querySelector('.student-content').addEventListener('mouseout', out);
+  student.querySelector('.student-content').addEventListener('touchend', out);
 });
 featuredStudents.forEach(function (student, i) {
   var images = student.querySelectorAll('img');

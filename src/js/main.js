@@ -126,18 +126,23 @@ allStudents.forEach((student) => {
 		});
 	};
 
-	student.querySelector('.student-content').addEventListener('mouseenter', () => {
+	let over = () => {
 		changeImage();
 		intervalID = setInterval(changeImage, 500);
-	});
-	student.querySelector('.student-content').addEventListener('mouseleave', () => {
+	};
+	let out = () => {
 		clearInterval(intervalID);
 		currentPhotoIndex = 0;
 		photos.forEach((photo, i) => {
 			photos[i].classList.remove('show');
 			photos[i].classList.remove('hide');
 		});
-	});
+	};
+
+	student.querySelector('.student-content').addEventListener('mouseover', over);
+	student.querySelector('.student-content').addEventListener('touchstart', over);
+	student.querySelector('.student-content').addEventListener('mouseout', out);
+	student.querySelector('.student-content').addEventListener('touchend', out);
 });
 
 featuredStudents.forEach((student, i) => {
