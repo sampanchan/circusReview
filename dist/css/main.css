@@ -532,6 +532,25 @@ table {
 		grid-row-end: span 9;
 	}
 }
+.the-mega-grid .grad-divider {
+	grid-column-end: span 25;
+	grid-row-end: span 2;
+}
+@media screen and (max-width: 576px) {
+	.the-mega-grid .grad-divider {
+		grid-column-end: span 13;
+		grid-row-end: span 6;
+	}
+}
+.the-mega-grid .spacer-top-of-non-grads {
+	grid-column: 1/span 12;
+	grid-row-end: span 4;
+}
+@media screen and (max-width: 576px) {
+	.the-mega-grid .spacer-top-of-non-grads {
+		display: none;
+	}
+}
 .the-mega-grid .end-cap {
 	grid-column-end: span 12;
 	grid-row-end: span 4;
@@ -824,6 +843,9 @@ body {
 .student.student-dark-blue figure {
 	background-color: #6877aa;
 }
+.student.student-red figure {
+	background-color: #ae5353;
+}
 .student .student-content {
 	width: 100%;
 	display: flex;
@@ -990,6 +1012,69 @@ body {
 }
 .faq .faq-content ul li p a {
 	color: black;
+}
+
+@media screen and (max-width: 576px) {
+	.end-cap-after-grads {
+		display: none;
+	}
+}
+
+.grad-divider {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 2.3vw;
+}
+@media screen and (max-width: 576px) {
+	.grad-divider {
+		flex-direction: column;
+		font-size: 5vw;
+	}
+}
+.grad-divider p {
+	text-align: center;
+	width: 28vw;
+}
+@media screen and (max-width: 576px) {
+	.grad-divider p {
+		width: 100%;
+	}
+}
+.grad-divider p.stars {
+	display: flex;
+	justify-content: space-evenly;
+}
+.grad-divider p.stars img {
+	height: 0.8em;
+}
+.grad-divider .bouncer {
+	position: relative;
+	-webkit-animation-name: bounce-arrow;
+	        animation-name: bounce-arrow;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	        animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+}
+.grad-divider .bouncer.bouncer-offset {
+	-webkit-animation-delay: 0.5s;
+	        animation-delay: 0.5s;
+}
+
+.spacer-top-of-non-grads {
+	display: flex;
+}
+.spacer-top-of-non-grads div {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.spacer-top-of-non-grads div img {
+	height: 16%;
 }
 
 /* 

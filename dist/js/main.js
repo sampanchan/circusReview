@@ -131,6 +131,16 @@ var showHideStudents = function showHideStudents() {
       item.style.display = 'none';
     }
   });
+
+  if ('all' === pickedCohort) {
+    document.querySelectorAll('.grad-dividing-element').forEach(function (el) {
+      return el.style.display = '';
+    });
+  } else {
+    document.querySelectorAll('.grad-dividing-element').forEach(function (el) {
+      return el.style.display = 'none';
+    });
+  }
 }; // Silly animations up top
 
 

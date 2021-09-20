@@ -76,6 +76,11 @@ let showHideStudents = () => {
 			item.style.display = 'none';
 		}
 	});
+	if ('all' === pickedCohort) {
+		document.querySelectorAll('.grad-dividing-element').forEach((el) => (el.style.display = ''));
+	} else {
+		document.querySelectorAll('.grad-dividing-element').forEach((el) => (el.style.display = 'none'));
+	}
 };
 
 // Silly animations up top

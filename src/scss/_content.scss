@@ -316,6 +316,11 @@ body {
 			background-color: #6877aa;
 		}
 	}
+	&.student-red {
+		figure {
+			background-color: #ae5353;
+		}
+	}
 	.student-content {
 		width: 100%;
 		display: flex;
@@ -499,6 +504,63 @@ body {
 					}
 				}
 			}
+		}
+	}
+}
+
+.end-cap-after-grads {
+	@include mixins.mobile {
+		display: none;
+	}
+}
+
+.grad-divider {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 2.3vw;
+	@include mixins.mobile {
+		flex-direction: column;
+		font-size: 5vw;
+	}
+	p {
+		text-align: center;
+		width: 28vw;
+
+		@include mixins.mobile {
+			width: 100%;
+		}
+	}
+	p.stars {
+		display: flex;
+		justify-content: space-evenly;
+		img {
+			height: 0.8em;
+		}
+	}
+	.bouncer {
+		position: relative;
+		animation-name: bounce-arrow;
+		animation-duration: 1s;
+		// animation-direction: alternate;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+
+		&.bouncer-offset {
+			animation-delay: 0.5s;
+		}
+	}
+}
+
+.spacer-top-of-non-grads {
+	display: flex;
+	div {
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			height: 16%;
 		}
 	}
 }

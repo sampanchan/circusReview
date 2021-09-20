@@ -221,6 +221,23 @@
 		}
 	}
 
+	.grad-divider {
+		grid-column-end: span 25;
+		grid-row-end: span 2;
+		@include mixins.mobile {
+			grid-column-end: span 13;
+			grid-row-end: span 6;
+		}
+	}
+
+	.spacer-top-of-non-grads {
+		grid-column: 1 / span 12;
+		grid-row-end: span 4;
+		@include mixins.mobile {
+			display: none;
+		}
+	}
+
 	.end-cap {
 		grid-column-end: span 12;
 		grid-row-end: span 4;
