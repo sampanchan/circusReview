@@ -568,13 +568,17 @@ body {
 	justify-content: center;
 	align-items: center;
 }
-.logo img {
-	height: 70%;
+.logo a {
+	width: 65%;
+	height: 65%;
+}
+.logo a img {
+	width: 100%;
 	transition: 1s;
 }
-.logo img:hover {
-	-ms-transform: rotate(360deg);
-	    transform: rotate(360deg);
+.logo a img:hover {
+	-ms-transform: rotate(360deg) scale(1.25);
+	    transform: rotate(360deg) scale(1.25);
 }
 
 .nav {
