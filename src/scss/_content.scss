@@ -483,6 +483,10 @@ body {
 		h2 {
 			font-size: 4em;
 			letter-spacing: 0.2em;
+			transition: 0.3s;
+			&:hover {
+				letter-spacing: 0.3em;
+			}
 		}
 
 		ul {
@@ -561,6 +565,27 @@ body {
 		align-items: center;
 		img {
 			height: 16%;
+		}
+	}
+}
+
+.faq {
+	@include mixins.bt;
+	@include mixins.bl;
+}
+
+footer {
+	display: flex;
+	height: variables.$column * 2;
+	@include mixins.bt;
+	@include mixins.bl;
+	div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1;
+		img {
+			width: 3vw;
 		}
 	}
 }

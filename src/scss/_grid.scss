@@ -242,11 +242,4 @@
 		grid-column-end: span 12;
 		grid-row-end: span 4;
 	}
-
-	.faq {
-		grid-column-end: span 25;
-		@include mixins.mobile {
-			grid-column-end: span 12;
-		}
-	}
 }
