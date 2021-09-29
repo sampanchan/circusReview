@@ -20,6 +20,7 @@ var allStudentSpacers = document.querySelectorAll('.student-spacer');
 var cohortPickerItems = document.querySelectorAll('.cohort-picker li');
 var programPickerItems = document.querySelectorAll('.program-picker li');
 var featuredStudents = document.querySelectorAll('.featured-person');
+var intervalID = -1;
 cohortPickerItems.forEach(function (item) {
   item.addEventListener('click', function () {
     if (pickedCohort === this.dataset.cohort) return;
@@ -132,13 +133,13 @@ var showHideStudents = function showHideStudents() {
     }
   });
 
-  if ('all' === pickedCohort) {
+  if ('all' !== pickedCohort || 'creativetechnology' === pickedProgram) {
     document.querySelectorAll('.grad-dividing-element').forEach(function (el) {
-      return el.style.display = '';
+      return el.style.display = 'none';
     });
   } else {
     document.querySelectorAll('.grad-dividing-element').forEach(function (el) {
-      return el.style.display = 'none';
+      return el.style.display = '';
     });
   }
 }; // Silly animations up top
@@ -166,9 +167,9 @@ setInterval(function () {
 allStudents.forEach(function (student) {
   var photos = student.querySelectorAll('figure img');
   var currentPhotoIndex = 0;
-  var intervalID = -1;
 
   var changeImage = function changeImage() {
+    console.log('change image');
     currentPhotoIndex++;
 
     if (currentPhotoIndex === photos.length) {
@@ -187,6 +188,7 @@ allStudents.forEach(function (student) {
   };
 
   var over = function over() {
+    clearInterval(intervalID);
     changeImage();
     intervalID = setInterval(changeImage, 500);
   };
@@ -200,10 +202,15 @@ allStudents.forEach(function (student) {
     });
   };
 
-  student.querySelector('.student-content').addEventListener('mouseover', over);
-  student.querySelector('.student-content').addEventListener('touchstart', over);
-  student.querySelector('.student-content').addEventListener('mouseout', out);
-  student.querySelector('.student-content').addEventListener('touchend', out);
+  if (isTouchDevice()) {
+    console.log('touch');
+    student.querySelector('.student-content').addEventListener('touchstart', over);
+    student.querySelector('.student-content').addEventListener('touchend', out);
+  } else {
+    console.log('not touch');
+    student.querySelector('.student-content').addEventListener('mouseover', over);
+    student.querySelector('.student-content').addEventListener('mouseout', out);
+  }
 });
 featuredStudents.forEach(function (student, i) {
   var images = student.querySelectorAll('img');
@@ -298,5 +305,9 @@ document.querySelectorAll('.student').forEach(function (student) {
       });
     });
   });
-});
+}); // stolen from Modernizr
+
+function isTouchDevice() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+}
 //# sourceMappingURL=main.js.map

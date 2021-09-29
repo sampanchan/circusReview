@@ -6,6 +6,8 @@ let allStudentSpacers = document.querySelectorAll('.student-spacer');
 let cohortPickerItems = document.querySelectorAll('.cohort-picker li');
 let programPickerItems = document.querySelectorAll('.program-picker li');
 let featuredStudents = document.querySelectorAll('.featured-person');
+let intervalID = -1;
+
 cohortPickerItems.forEach((item) => {
 	item.addEventListener('click', function () {
 		if (pickedCohort === this.dataset.cohort) return;
@@ -76,10 +78,10 @@ let showHideStudents = () => {
 			item.style.display = 'none';
 		}
 	});
-	if ('all' === pickedCohort) {
-		document.querySelectorAll('.grad-dividing-element').forEach((el) => (el.style.display = ''));
-	} else {
+	if ('all' !== pickedCohort || 'creativetechnology' === pickedProgram) {
 		document.querySelectorAll('.grad-dividing-element').forEach((el) => (el.style.display = 'none'));
+	} else {
+		document.querySelectorAll('.grad-dividing-element').forEach((el) => (el.style.display = ''));
 	}
 };
 
@@ -109,9 +111,9 @@ setInterval(() => {
 allStudents.forEach((student) => {
 	let photos = student.querySelectorAll('figure img');
 	let currentPhotoIndex = 0;
-	let intervalID = -1;
 
 	let changeImage = () => {
+		console.log('change image');
 		currentPhotoIndex++;
 		if (currentPhotoIndex === photos.length) {
 			currentPhotoIndex = 0;
@@ -127,6 +129,7 @@ allStudents.forEach((student) => {
 	};
 
 	let over = () => {
+		clearInterval(intervalID);
 		changeImage();
 		intervalID = setInterval(changeImage, 500);
 	};
@@ -139,10 +142,15 @@ allStudents.forEach((student) => {
 		});
 	};
 
-	student.querySelector('.student-content').addEventListener('mouseover', over);
-	student.querySelector('.student-content').addEventListener('touchstart', over);
-	student.querySelector('.student-content').addEventListener('mouseout', out);
-	student.querySelector('.student-content').addEventListener('touchend', out);
+	if (isTouchDevice()) {
+		console.log('touch');
+		student.querySelector('.student-content').addEventListener('touchstart', over);
+		student.querySelector('.student-content').addEventListener('touchend', out);
+	} else {
+		console.log('not touch');
+		student.querySelector('.student-content').addEventListener('mouseover', over);
+		student.querySelector('.student-content').addEventListener('mouseout', out);
+	}
 });
 
 featuredStudents.forEach((student, i) => {
@@ -190,3 +198,8 @@ document.querySelectorAll('.student').forEach((student) => {
 		});
 	});
 });
+
+// stolen from Modernizr
+function isTouchDevice() {
+	return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+}
